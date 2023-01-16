@@ -32,7 +32,7 @@
     </div>
     <div class="form-group col-md-6">
         {!! Form::label('opd', 'opd', array('class' => 'col-md-6 control-label')) !!}
-        {!! Form::select('opd_id', $opd, $user->opd->id, array('id' => 'opd_id', 'class' =>
+        {!! Form::select('opd_id', $opd, $user->opd->id??null, array('id' => 'opd_id', 'class' =>
         'form-control')) !!}
     </div>
     
