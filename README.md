@@ -1,8 +1,8 @@
-# SPBE Province Of Riau (v.1.0)
-SISTEM PEMERINTAH BERBASIS ELECTRONIC (SPBE) PROVINSI RIAU
+# APLIKASI SATU DATA
+Master by MIKHSANW
 
 ### Requirements
-- PHP >= 8.0
+- PHP >= 8.1
 - Composer >= 2.0
 - Os Linux Ubuntu newest version (recommended)
 - Web Server Nginx or Apache (recommended)
