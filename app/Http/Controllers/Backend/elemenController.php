@@ -32,7 +32,7 @@ class elemenController extends Controller
     public function data(Request $request, $id=NULL)
     {
         if ($request->ajax()) {
-            $data= $id!=NULL ? $this->model::whereParentId($id)->whereOpdId(Auth::user()->opd_id)->latest()->get() : $this->model::whereNull('parent_id')->whereOpdId(Auth::user()->opd_id)->latest()->get();
+            $data= $id!=NULL ? $this->model::whereParentId($id)->whereOpdId(Auth::user()->opd_id)->get() : $this->model::whereNull('parent_id')->whereOpdId(Auth::user()->opd_id)->get();
             return Datatables::of($data)->addIndexColumn()
                 ->addColumn('kelola', function($q){
                     if($q->status==0){
