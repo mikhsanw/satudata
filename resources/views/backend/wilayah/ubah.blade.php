@@ -6,14 +6,6 @@
             {!! Form::text('nama', $data->nama, array('id' => 'nama', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
-            {!! Form::label('link', 'Masukkan Link', array('class' => 'control-label')) !!}
-            {!! Form::text('link', $data->link, array('id' => 'link', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
-        </p>
-        <p>
-            {!! Form::label('isi', 'Tambahkan Informasi disini', array('class' => 'control-label')) !!}
-            {!! Form::textarea('isi', $data->isi, array('id' => 'isi', 'class' => 'form-control js-summernote')) !!}
-        </p>
-        <p>
             {!! Form::label('tingkatan', 'Pilih tingkatan', array('class' => 'control-label')) !!}
             {!! Form::select('tingkatan', config('master.tingkatandaerah'), $data->tingkatan, array('id' => 'tingkatan', 'class' => 'select2 form-control tingkatan', 'placeholder'=>'Pilih')) !!}
         </p>

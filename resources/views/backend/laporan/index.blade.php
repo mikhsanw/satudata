@@ -26,7 +26,7 @@
 				@foreach($datas as $data)
 					<tr>
 						<td>{{$i}}</td>
-						<td>{{$data->nama}}</td>
+						<td>{{$data->nama??''}}</td>
 						<td>{{$data->satuan??''}}</td>
 						<td>{{(count($data->data)>0)?$data->opd->nama:''}}</td>
 						<td>{{(count($data->data)>0)?'Ada':''}}</td>
