@@ -45,6 +45,6 @@ class Elemen extends Model
 
     public function filterjumlah($id,$th)
     {
-        return $this->join('data','data.elemen_id','elemens.id')->select('jumlah')->where('elemens.id',$id)->where('data.tahun',$th)->first();
+        return $this->join('data','data.elemen_id','elemens.id')->select('jumlah')->where('elemens.id',$id)->where('data.tahun',$th)->whereNull('data.deleted_at')->first();
     }
 }
