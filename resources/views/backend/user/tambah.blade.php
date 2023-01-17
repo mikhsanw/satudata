@@ -6,7 +6,11 @@
             {!! Form::text('nama', NULL, array('id' => 'nama', 'class' => 'form-control', 'placeholder' => 'Nama')) !!}
         </div>
         <div class="form-group">
+<<<<<<< HEAD
             {!! Form::label('nip', 'Username', array('class' => 'control-label')) !!}
+=======
+            {!! Form::label('username', 'Username', array('class' => 'control-label')) !!}
+>>>>>>> 590674d43f831603d2c2b556a5e140c5376e0667
             {!! Form::text('nip', NULL, array('id' => 'nip', 'class' => 'form-control', 'placeholder' => 'Username')) !!}
         </div>
         <div class="form-group">
