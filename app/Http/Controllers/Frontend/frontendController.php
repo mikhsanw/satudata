@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\foto;
+use App\Model\Opd;
 class frontendController extends Controller
 {
     /**
@@ -16,6 +17,7 @@ class frontendController extends Controller
     {   
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
+            'opd' => Opd::get(),
         );
         return view('frontend.beranda.index',$data);
     }
@@ -85,4 +87,10 @@ class frontendController extends Controller
     {
         //
     }
+
+    public function opdDetail($id){
+        $dataOpd = Opd::findOrFail($id);
+        return view('frontend.beranda.opd', compact('dataOpd'));
+    }
+
 }

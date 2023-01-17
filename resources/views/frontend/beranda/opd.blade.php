@@ -1,0 +1,2 @@
+{{$dataOpd->id}}
+{{$dataOpd->nama}}
