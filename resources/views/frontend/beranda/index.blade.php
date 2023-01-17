@@ -4,7 +4,20 @@
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
     <img src="{{asset('images/satu-data.png')}}" height="200" width="400" alt="image">
-    <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p>
+    <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
+    <form class="search-big-form no-border search-shadow" method="post" action="#">
+			<div class="row m-0">
+				<div class="col-lg-2 col-md-5 col-sm-12 p-0">
+				  <div class="form-group">
+				  <i class="ti-search"></i>
+				    <input name="tt" type="text" class="form-control b-r" placeholder="Pencarian Data ...">
+				  </div>
+				</div>
+		    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+			    <button type="submit" class="btn btn-primary full-width"><i class="bx bx-search"></i> Cari</button>
+			  </div>
+			</div>
+		</form>
     <div class="social-links">
       <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
       <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -21,8 +34,8 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>SATU DATA</h2>
-        <p>Merupakan Aplikasi Yang Menyediakan Data Tentang Pemerintah Kabupaten Bengkalis Yang Berkualitas dan Terbuka, Serta Memberikan Kemudahan Akses Untuk Masyarakat dan Instansi Pemerintahan.</p>
+        <h2>SATU DATA KABUPATEN BENGKALIS</h2>
+        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
       </div>
 
       <div class="row">
@@ -248,7 +261,7 @@
 
       <div class="section-title">
         <h2>DATA STATISTIK SEKTORAL</h2>
-        <p>Data di Lingkungan Pemerintahan Kabupaten Bengkalis.</p>
+        <p>Data Kategori Dilingkungan Pemerintah Kabupaten Bengkalis</p>
       </div>
 
       <div class="row">
@@ -349,12 +362,12 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
+              <img src="{{asset('images/bupati.jpg')}}" class="testimonial-img" alt="">
+              <h3>Kasmarni, S.Sos, MMP</h3>
+              <h4>Bupati Bengkalis</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                Saya Yakin Dengan Adanya Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Semoga Penilaian dan Predikat Kabupaten Bengkalis Terus Menjadi Yang Terbaik Untuk Terwujudnya Bengkalis BERMASA.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -362,12 +375,12 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
+              <img src="{{asset('images/wabup.jpg')}}" class="testimonial-img" alt="">
+              <h3>H. Bagus Santoso, MP</h3>
+              <h4>Wakil Bupati Bengkalis</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                Mudah-mudahan Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Terus Memberikan Yang Terbaik Dalam Penilaian Capaian Kinerja dalam mendukung terwujudnya Kabupaten Bengkalis Yang BERMASA.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -375,12 +388,12 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
+              <img src="{{asset('images/sekda.png')}}" class="testimonial-img" alt="">
+              <h3>H. Bustami HY, SH., MM</h3>
+              <h4>Sekretaris Daerah</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                Semoga Dengan Aplikasi Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Bisa Selalu Memberikan Hasil Penilaian Capaian Kinerja Yang Terbaik Untuk Mewujudkan Kabupaten Bengkalis Yang BERMASA.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -388,12 +401,12 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
+              <img src="{{asset('images/kadis.jpg')}}" class="testimonial-img" alt="">
+              <h3>Hendrik Dwi Yatmoko, S.Sos, MT</h3>
+              <h4>Kepala Dinas Komunikasi Informatika dan Statistik</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Akan Terus Berupaya Untuk Memberikan Penilaian Capaian Kinerja Dalam Mendukung Terwujudnya Visi Kabupaten Bengkalis Yang BERMASA.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -401,12 +414,12 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
+              <img src="{{asset('images/kabid.jpg')}}" class="testimonial-img" alt="">
+              <h3>Azmar, S.Kom, MIP</h3>
+              <h4>Kepala Bidang Statistik dan Persandian</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Akan Terus Berupaya Untuk Memberikan Penilaian Capaian Kinerja Dalam Mendukung Terwujudnya Visi Kabupaten Bengkalis Yang BERMASA.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -433,29 +446,29 @@
           <div class="info">
             <div class="address">
               <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h4>Alamat:</h4>
+              <p>Jl. Kartini No. 012 Kode Pos 28712 Bengkalis Riau</p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>diskominfotik@bengkaliskab.go.id</p>
             </div>
 
             <div class="phone">
-              <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <i class="bi bi-globe"></i>
+              <h4>Website:</h4>
+              <p>satudata.bengkaliskab.go.id</p>
             </div>
 
           </div>
 
         </div>
 
-        <div class="col-lg-8 mt-5 mt-lg-0">
-
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div class="col-lg-8 mt-5 mt-lg-0">       
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5100263836557!2d102.10877601475414!3d1.4673225989298937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d15fb61176003d%3A0x69600c0570fcb2a2!2sDinas%20Komunikasi%2C%20Informatika%20Dan%20Statistik%20Kabupaten%20Bengkalis!5e0!3m2!1sid!2sid!4v1673957591465!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          {{-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -476,7 +489,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
+          </form> --}}
 
         </div>
 
