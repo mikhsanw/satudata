@@ -112,6 +112,11 @@
                                     @stack('panel')
                                     <div class="panel-toolbar">
                                         <div class="btn-group">
+                                        <a href="{{ URL::previous() }}" class="btn btn-sm btn-info kembali">
+                                           <i class="fa fa-arrow-circle-left"></i> Kembali
+                                        </a>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="btn-group">
                                             @stack('tombol')
                                         </div>
                                     </div>

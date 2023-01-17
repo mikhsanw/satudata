@@ -4,14 +4,14 @@
 @push('tombol')
 <div class="panel-toolbar">
 <a class="btn btn-sm btn-success waves-effect waves-themed kelengkapan" data-toggle="tooltip" data-placement="top" title="Tambah" data-id="{{$id}}" href="#kelengkapan-{{$id}}">
-	Lengkapi Elemen <i class="fas fa-edit"></i>
+@if($status!=1) Ubah @endif Kelengkapan Elemen <i class="fas fa-edit"></i>
 </a>
 </div>&nbsp;&nbsp;
 @if($status!=1)
 <div class="panel-toolbar">
-<a href="#tambah" class="btn btn-sm btn-primary waves-effect waves-themed tambah">
-	Tambah  <i class="fa fa-plus-circle"></i>
-</a>
+	<a href="#tambah" class="btn btn-sm btn-primary waves-effect waves-themed tambah">
+		Tambah  <i class="fa fa-plus-circle"></i>
+	</a>
 </div>
 @endif
 

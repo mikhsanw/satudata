@@ -39,7 +39,7 @@ class elemenController extends Controller
                         $kelola = '<div style="text-align: center;"><a href="'.url($this->kode.'/'.$q->id).'" class="text-info"><i class="fa fa-share text-info"></i></a></div>';
                     }
                     elseif($q->status==1 || $q->status==2){
-                        $kelola = '<div style="text-align: center;"><a href="'.url('data/'.$q->id).'" class="text-info"><i class="fal fa-plus text-info"></i></a></div>';
+                        $kelola = '<div style="text-align: center;"><a href="'.url('data/'.$q->id).'" class="text-info"><i class="fa fa-plus text-info"></i></a></div>';
                     }
                     return $kelola ?? NULL;
                 })
