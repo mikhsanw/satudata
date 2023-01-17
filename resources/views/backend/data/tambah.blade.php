@@ -4,7 +4,7 @@
         <p>
             <small class="text-danger"> *</small>
             {!! Form::label('jumlah', 'Masukkan jumlah', array('class' => 'control-label')) !!}
-            {!! Form::number('jumlah', null, array('id' => 'jumlah', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+            {!! Form::text('jumlah', null, array('id' => 'jumlah', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
             <small class="text-danger"> *</small>
