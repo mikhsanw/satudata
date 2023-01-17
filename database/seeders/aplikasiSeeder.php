@@ -17,9 +17,9 @@ class aplikasiSeeder extends Seeder
         DB::table('aplikasis')->truncate();
         DB::table('aplikasis')->insert([
             'id'=>\Ramsey\Uuid\Uuid::uuid4()->toString(),
-            'nama'=>'Aplikasi',
-            'singkatan'=>'SINGKATAN',
-            'daerah'=>'Provinsi RIAU',
+            'nama'=>'Aplikasi Satu Data',
+            'singkatan'=>'SATU DATA',
+            'daerah'=>'Pemerintah Kabupaten Bengkalis',
         ]);
         Schema::enableForeignKeyConstraints();
     }

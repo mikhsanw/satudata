@@ -22,7 +22,7 @@ class userSeeder extends Seeder
             'password'=>bcrypt($this->userpass),
             'aksesgrup_id'=>1,
             'level'=>1,
-            'email'=>'spbe@riau.go.id',
+            'email'=>'bengkalis@bengkaliskab.go.id',
             'email_verified_at'=>date("Y-m-d H:i:s"),
         ]);
         Schema::enableForeignKeyConstraints();
