@@ -4,7 +4,7 @@
 @section('content')
 <div class="panel-container show">
 	<div class="panel-content">
-		<table id="" class="table table-bordered table-hover table-striped w-100">
+		<table id="" class="table table-bordered table-hover table-striped table-responsive">
 		<thead class="bg-primary-600">
 				<tr>
 					<td rowspan="2" style="vertical-align : middle;text-align:center;">No</td>
