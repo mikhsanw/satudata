@@ -4,7 +4,7 @@
     <td>{{$item->nama}}</td>
     <td>{{$item->satuan??''}}</td>
     <td>{{($data->opd->nama??'')}}</td>
-    <td>{{(count($item->data)>0)?'Ada':'Tidak Ada'}}</td>
+    <td>{{(count($item->data)>0)?'Ada':''}}</td>
     @foreach($tahun as $th)
         <td>{{$elemen->filterjumlah($item->id??'',$th)->jumlah??''}}</td>
     @endforeach
