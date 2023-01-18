@@ -12,12 +12,12 @@
 					<td rowspan="2" style="vertical-align : middle;text-align:center;">Satuan</td>
 					<td rowspan="2" style="vertical-align : middle;text-align:center;">Produsen Data</td>
 					<td rowspan="2" style="vertical-align : middle;text-align:center;">Ketersediaan Data</td>
-					<td colspan="{{count($tahuns->data)}}" style="vertical-align : middle;text-align:center;">Tahun Produksi</td>
+					<td colspan="{{count($tahuns)}}" style="vertical-align : middle;text-align:center;">Tahun Produksi</td>
 					<td rowspan="2" style="vertical-align : middle;text-align:center;">Catatan</td>
 				</tr>
 				<tr>
-					@foreach($tahuns->data as $th)
-					<td style="vertical-align : middle;text-align:center;">{{$tahun[]=$th->tahun}}</td>
+					@foreach($tahuns as $th)
+					<td style="vertical-align : middle;text-align:center;">{{$tahun[]=$th}}</td>
 					@endforeach
 				</tr>
 			</thead>
