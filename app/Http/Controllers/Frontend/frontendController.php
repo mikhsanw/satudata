@@ -93,4 +93,9 @@ class frontendController extends Controller
         return view('frontend.beranda.opd', compact('dataOpd'));
     }
 
+    public function cari($title){
+        $data = Elemen::where('nama' ,'LIKE','%'.$id.'%')->get();
+        return view('frontend.beranda.cari', compact('data'));
+    }
+
 }
