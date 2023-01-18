@@ -21,7 +21,7 @@ class dataController extends Controller
         $elemen=Elemen::find($id);
         $data=[
             'id'=>$id,
-            'status'=>$elemen->status
+            'elemen'=>$elemen
         ];
         return view('backend.'.$this->kode.'.index',$data);
     }
@@ -74,7 +74,6 @@ class dataController extends Controller
                 $respon=['status'=>false, 'pesan'=>$validator->messages()];
             }
             else {
-                $request->request->add(['status'=>2]);
                 Elemen::whereId($request->id)->first()->update($request->all());
                 $respon=['status'=>true, 'pesan'=>'Data berhasil disimpan'];
             }

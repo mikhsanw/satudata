@@ -17,7 +17,7 @@ return new class extends Migration
                 $table->uuid('id')->primary();
                 $table->string('jumlah')->nullable();
                 $table->string('tahun')->nullable();
-                $table->foreignUuid('elemen_id')->nullable()->constrained()->onDelete('set null');
+                $table->foreignUuid('elemen_id')->nullable()->constrained()->onDelete('cascade');
                 $table->timestamps();
                 $table->softDeletes();
         });

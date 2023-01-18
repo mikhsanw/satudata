@@ -35,20 +35,16 @@
 
       <div class="section-title">
         <h2>SATU DATA KABUPATEN BENGKALIS</h2>
-        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
+        <p>Pencarian data tentang "{{$keyword}}"</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-4">
-          <img src="{{asset('images/satu-data.png')}}" height="200" width="400" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content">
-          <h3>Tentang Satu Data</h3>
-          <p class="text-justify">
-          Merupakan salah satu aplikasi yang dibangun oleh Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis. Dibuat dengan tujuan sebagai media untuk penyajian data informasi spesifik dari Data Sektoral dan Data Spasial. 
-          Aplikasi ini dikelola oleh bidang Statistik yang ada di Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis yang bekerjasama dengan Organisasi Perangkat Daerah (OPD) lingkup Pemerintah Kabupaten Bengkalis. 
-          Diharapkan dengan adanya aplikasi Satu Data ini, bisa membantu masyarakat/akademisi/pengusaha/instansi pemerintahan dalam mendapatkan data yang valid serta up to date.
-          </p>
+        <div class="col-lg-12 pt-4 pt-lg-0 content">
+        <ul>
+          @foreach($elemen as $data)
+          <li>{{$data->nama}}</li>
+          @endforeach
+        </ul>
         </div>
       </div>
 

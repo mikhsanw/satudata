@@ -220,7 +220,13 @@ class elemenController extends Controller
                 $response=['status'=>FALSE, 'pesan'=>$validator->messages()];
             }
             else {
-                if ($this->model::find($id)->update($request->all())) {
+                $data=$this->model::find($id);
+                if($request->status!=0 && $data->status==0){
+                    $data->whereParentId($id)->delete();
+                    Data::whereElemenId($id)->delete();
+                    $request->request->add(['satuan'=>null,'wilayah_id'=>null,'keterangan'=>null]);
+                }
+                if ($data->update($request->all())) {
                     $response=['status'=>TRUE, 'pesan'=>['msg'=>'Data berhasil diubah']];
                 }
                 else {

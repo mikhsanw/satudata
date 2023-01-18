@@ -1,13 +1,13 @@
 @extends('backend.home.index')
 @push('title',ucwords(strtolower($halaman->nama)))
-@push('header',ucwords(strtolower($halaman->nama)))
+@push('header',ucwords(strtolower(Help::shortDescription($elemen->nama,7))))
 @push('tombol')
 <div class="panel-toolbar">
 <a class="btn btn-sm btn-success waves-effect waves-themed kelengkapan" data-toggle="tooltip" data-placement="top" title="Tambah" data-id="{{$id}}" href="#kelengkapan-{{$id}}">
-@if($status!=1) Ubah @endif Kelengkapan Elemen <i class="fas fa-edit"></i>
+@if($elemen->satuan!=null) Ubah @endif Kelengkapan Elemen <i class="fas fa-edit"></i>
 </a>
 </div>&nbsp;&nbsp;
-@if($status!=1)
+@if($elemen->satuan!=null)
 <div class="panel-toolbar">
 	<a href="#tambah" class="btn btn-sm btn-primary waves-effect waves-themed tambah">
 		Tambah  <i class="fa fa-plus-circle"></i>

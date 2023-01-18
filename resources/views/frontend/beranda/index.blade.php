@@ -5,12 +5,12 @@
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
     <img src="{{asset('images/satu-data.png')}}" height="200" width="400" alt="image">
     <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
-    <form class="search-big-form no-border search-shadow" method="post" action="#">
+    <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#detail')}}">
 			<div class="row m-0">
 				<div class="col-lg-2 col-md-5 col-sm-12 p-0">
 				  <div class="form-group">
 				  <i class="ti-search"></i>
-				    <input name="tt" type="text" class="form-control b-r" placeholder="Pencarian Data ...">
+				    <input name="keyword" type="text" class="form-control b-r" placeholder="Pencarian Data ...">
 				  </div>
 				</div>
 		    <div class="col-lg-3 col-md-3 col-sm-12 p-0">

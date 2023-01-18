@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\foto;
 use App\Model\Opd;
+use App\Model\Elemen;
 class frontendController extends Controller
 {
     /**
@@ -93,9 +94,13 @@ class frontendController extends Controller
         return view('frontend.beranda.opd', compact('dataOpd'));
     }
 
-    public function cari($title){
-        $data = Elemen::where('nama' ,'LIKE','%'.$id.'%')->get();
-        return view('frontend.beranda.cari', compact('data'));
+    public function cari(Request $request){
+        $cari = $request->keyword;
+        $data = [
+            'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->get(),
+            'keyword'=>$cari
+        ];
+        return view('frontend.beranda.cari', $data);
     }
 
 }
