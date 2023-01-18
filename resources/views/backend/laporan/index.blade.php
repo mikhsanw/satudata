@@ -25,7 +25,7 @@
 				@php $i=1; @endphp
 				@foreach($datas as $data)
 					<tr>
-						<td style="font-weight: bold;">{{$i}}</td>
+						<td style="font-weight: bold; text-align: center;">{{$i}}</td>
 						<td style="font-weight: bold;">{{$data->nama??''}}</td>
 						<td>{{$data->satuan??''}}</td>
 						<td>{{($data->opd->nama??'')}}</td>
