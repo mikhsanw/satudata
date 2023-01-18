@@ -97,7 +97,8 @@ class frontendController extends Controller
     public function cari(Request $request){
         $cari = $request->keyword;
         $data = [
-            'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->get(),
+            'elemen'=>Elemen::whereNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
+            'subelemen'=>Elemen::whereNotNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
             'keyword'=>$cari
         ];
         return view('frontend.beranda.cari', $data);

@@ -39,10 +39,27 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-12 pt-4 pt-lg-0 content">
+        <div class="col-lg-12 pt-4 pt-lg-0 pb-5">
+          <h4>Elemen</h4>
         <ul>
           @foreach($elemen as $data)
-          <li>{{$data->nama}}</li>
+          <li>
+            <a href="" style="color:red;">
+              {{$data->nama}}
+            </a>
+          </li>
+          @endforeach
+        </ul>
+        </div>
+        <div class="col-lg-12 pt-4 pt-lg-0 pb-5">
+          <h4>Sub Elemen</h4>
+        <ul>
+          @foreach($subelemen as $data)
+          <li>
+            <a href="" style="color:red;">
+              {{$data->nama}}
+            </a>
+          </li>
           @endforeach
         </ul>
         </div>
