@@ -97,11 +97,28 @@ class frontendController extends Controller
     public function cari(Request $request){
         $cari = $request->keyword;
         $data = [
+            'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->count(),
             'elemen'=>Elemen::whereNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
             'subelemen'=>Elemen::whereNotNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
             'keyword'=>$cari
         ];
-        return view('frontend.beranda.cari', $data);
+        return view('frontend.beranda.cari.index', $data);
+    }
+
+    public function caridetail($id){
+        $qr = Elemen::find($id);
+        if($qr->parent_id==null){
+            $elemen=$qr;
+        }else{
+            $elemen = Elemen::whereId($qr->parent_id)->first();
+        }
+
+        $data = [
+            'datas'=> $elemen,
+            'tahuns' => array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4),
+            'elemen' => new Elemen
+        ];
+        return view('frontend.beranda.cari.cari-detail', $data);
     }
 
 }
