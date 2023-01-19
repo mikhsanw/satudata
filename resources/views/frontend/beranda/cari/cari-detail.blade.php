@@ -79,6 +79,7 @@
 @push('js')
 <script src="{{ asset('backend/js/datagrid/datatables/datatables.bundle.js') }}"></script>
 <script src="{{ asset('backend/js/datagrid/datatables/datatables.export.js') }}"></script>
+<script>
 $(document).ready( function () {
     $('#datatable').DataTable();
 } );
@@ -101,4 +102,5 @@ $(function() {
         });
         
       });
+</script>
 @endpush
