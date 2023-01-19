@@ -3,7 +3,7 @@
   <div class="container">
     <h3>Bidang Statistik</h3>
     <p>Bidang Statistik Dinas Komunikasi Informatika dan Statistik Kabupaten Bengkalis Memiliki Fungsi Sebagai Satu Data Sektoral Kabupaten Bengkalis dan juga sebagai penyebarluasan data, hal ini sesuai dengan Perpres no 39 Tahun 2019 tentang Satu Data Indonesia serta di perkuat dengan adanya Perbup Bupati Bengkalis no 5 tahun 2019. Bidang Statistik Dinas Komunikasi Informatika dan Statistik Kabupaten Bengkalis yang saat ini dipimpin oleh Bapak Azmar, S.Kom, MIP.</p>
-    <h4>"TERWUJUDNYA KABUPATEN BENGKALIS YANG BERMARWAH, MAJU DAN SEJAHTERA"</h4>
+    <center><a href="https://bengkaliskab.go.id" target="_blank"><img src="{{asset('images/Kabupaten Bengkalis Bermasa.png')}}" alt=""></a></center>
     <br>
     <div class="social-links">
       <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
