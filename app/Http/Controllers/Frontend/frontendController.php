@@ -90,8 +90,11 @@ class frontendController extends Controller
     }
 
     public function opdDetail($id){
+        $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->get();
+        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $elemen = new Elemen;
         $dataOpd = Opd::findOrFail($id);
-        return view('frontend.beranda.opd', compact('dataOpd'));
+        return view('frontend.beranda.opd', compact('dataOpd','tahuns', 'elemen','datas'));
     }
 
     public function cari(Request $request){
