@@ -22,12 +22,28 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
+        <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#detail')}}">
+          <div class="row m-0">
+            <div class="col-lg-10 col-md-5 col-sm-12">
+              <div class="form-group">
+              <i class="ti-search"></i>
+                <input name="keyword" type="text" class="form-control b-r full-width" value="" placeholder="Pencarian Data ...">
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12">
+              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Cari</button>
+            </div>
+          </div>
+        </form>
+
         <h2>{{$datas->opd->nama}}</h2>
         <h5>{{$datas->nama}}</h5>
       </div>
 
       <div class="row pb-5">
-        <div class="col-lg-12 pt-4 pt-lg-0 pb-2 text-right"> <button id="export" class="btn btn-primary">Export</button> </div>
+        <div class="col-lg-12 pt-4 pt-lg-0 pb-2 text-right">
+          <a href="{{url('/export/'.$datas->id)}}" class="btn btn-info">Export to excel</a>
+        </div>
         <div class="col-lg-12 pt-4 pt-lg-0 pb-2">
         <table id="datatable" class="table table-bordered table-hover table-striped table-responsive">
           <thead class="bg-primary-600">
@@ -73,34 +89,11 @@
 </main><!-- End #main -->
 @endsection
 @push('css')
-<link rel="stylesheet" media="screen, print" href="{{ asset('backend/css/datagrid/datatables/datatables.bundle.css') }}">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
 @endpush
 @push('js')
-<script src="{{ asset('backend/js/datagrid/datatables/datatables.bundle.js') }}"></script>
-<script src="{{ asset('backend/js/datagrid/datatables/datatables.export.js') }}"></script>
 <script>
-$(document).ready( function () {
-    $('#datatable').DataTable();
-} );
-
-$(function() {
-        $("#export").click(function(e){
-          var table = $("#datatable");
-          if(table && table.length){
-            $(table).table2excel({
-              exclude: ".noExl",
-              name: "tes",
-              filename: "BBBootstrap" + new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls",
-              fileext: ".xls",
-              exclude_img: true,
-              exclude_links: true,
-              exclude_inputs: true,
-              preserveColors: false
-            });
-          }
-        });
-        
-      });
+  $('#datatable').DataTable( {
+    } );
 </script>
 @endpush

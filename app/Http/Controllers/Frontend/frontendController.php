@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Model\foto;
 use App\Model\Opd;
 use App\Model\Elemen;
+use App\Exports\PencarianExport;
+use Maatwebsite\Excel\Facades\Excel;
 class frontendController extends Controller
 {
     /**
@@ -106,12 +108,7 @@ class frontendController extends Controller
     }
 
     public function caridetail($id){
-        $qr = Elemen::find($id);
-        if($qr->parent_id==null){
-            $elemen=$qr;
-        }else{
-            $elemen = Elemen::whereId($qr->parent_id)->first();
-        }
+        $elemen = Elemen::find($id);
 
         $data = [
             'datas'=> $elemen,
@@ -119,6 +116,11 @@ class frontendController extends Controller
             'elemen' => new Elemen
         ];
         return view('frontend.beranda.cari.cari-detail', $data);
+    }
+
+    public function export($id) 
+    {
+        return Excel::download(new PencarianExport($id), $id.'.xlsx');
     }
 
 }

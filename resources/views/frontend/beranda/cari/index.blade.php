@@ -24,19 +24,19 @@
       <div class="section-title">
         <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#detail')}}">
           <div class="row m-0">
-            <div class="col-lg-11 col-md-5 col-sm-12 p-0">
+            <div class="col-lg-10 col-md-5 col-sm-12 p-0">
               <div class="form-group">
               <i class="ti-search"></i>
-                <input name="keyword" type="text" class="form-control b-r" value="{{$keyword}}" placeholder="Pencarian Data ...">
+                <input name="keyword" type="text" class="form-control b-r" value="{{$keyword??''}}" placeholder="Pencarian Data ...">
               </div>
             </div>
-            <div class="col-lg-1 col-md-3 col-sm-12 p-0">
-              <button type="submit" class="btn btn-primary full-width"><i class="bx bx-search"></i> Cari</button>
+            <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Cari</button>
             </div>
           </div>
         </form>
         <h2></h2>
-        <h5>{{$count}} hasil pencarian data tentang "{{$keyword}}"</h5>
+        <h5>{{$keyword?($count.' hasil pencarian data tentang '.$keyword):''}}</h5>
       </div>
 
       <div class="row pb-5">

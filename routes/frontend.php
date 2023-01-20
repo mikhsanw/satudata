@@ -12,3 +12,4 @@ Route::get('/', 'frontendController@index');
 Route::get('opdDetail/{id}', 'frontendController@opdDetail')->name('opdDetail');
 Route::get('cari', 'frontendController@cari');
 Route::get('caridetail/{id}', 'frontendController@caridetail');
+Route::get('export/{id}', 'frontendController@export');
