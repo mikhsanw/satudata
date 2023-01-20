@@ -146,7 +146,7 @@ class dataController extends Controller
     {
         if ($request->ajax()) {
             $validator=Validator::make($request->all(), [
-                'jumlah'              => 'required|'.config('master.regex.json'),
+                'jumlah'            => 'required|'.config('master.regex.json'),
                 'tahun'             => 'required|'.config('master.regex.json'),
             ]);
             if ($validator->fails()) {

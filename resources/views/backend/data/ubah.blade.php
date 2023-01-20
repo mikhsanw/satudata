@@ -7,7 +7,7 @@
         </p>
         <p>
             {!! Form::label('tahun', 'Masukkan Tahun', array('class' => 'control-label')) !!}
-            {!! Form::text('tahun', $data->tahun, array('id' => 'tahun', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+            {!! Form::text('tahun', $data->tahun, array('id' => 'datepicker', 'class' => 'form-control datepicker', 'autocomplete' => 'off')) !!}
         </p>
     </div>
     @if($data->file)
@@ -40,9 +40,9 @@
 <script src="{{ asset('backend/js/formplugins/summernote/summernote.js') }}" async=""></script>
 <script type="text/javascript">
     $('.modal-title').html('<span class="fa fa-edit"></span> Ubah {{$halaman->nama}}');
-    $('.js-summernote').summernote({
-        // toolbar: [['para', ['ul', 'ol']]],
-        height: 200,
-        dialogsInBody: true
+    $("#datepicker").datepicker( {
+        format: "yyyy", // Notice the Extra space at the beginning
+        viewMode: "years", 
+        minViewMode: "years"
     });
 </script>
