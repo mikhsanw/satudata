@@ -15,9 +15,12 @@ class Opd extends Model
         'id'=>'string',
     ];
     protected $fillable=[
-        'id', 'nama'
+        'id', 'nama', 'singkatan'
     ];
-
+    public function file()
+    {
+        return $this->morphOne(File::class, 'morph');
+    }
     public function elemen()
     {
         return $this->hasMany('App\Model\Elemen');

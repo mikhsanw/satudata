@@ -14,6 +14,7 @@
 				<tr>
 					<th class="width-1">No</th>
 					<th class="text-center">Nama Opd</th>
+					<th class="text-center">Singkatan</th>
 					<th width="50px" class="text-center" tabindex="0" rowspan="1" colspan="1">Aksi</th>
 				</tr>
 			</thead>

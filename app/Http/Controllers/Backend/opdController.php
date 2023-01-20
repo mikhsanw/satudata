@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Storage;
 
 class opdController extends Controller
 {
@@ -58,12 +59,23 @@ class opdController extends Controller
         if ($request->ajax()) {
             $validator=Validator::make($request->all(), [
                 'nama'              => 'required|'.config('master.regex.json'),
-                ]);
+                'file_foto'        => $request->hasFile('file_foto') ? 'required|mimes:jpg,png,jpeg' : ''
+            ]);
             if ($validator->fails()) {
                 $respon=['status'=>false, 'pesan'=>$validator->messages()];
             }
             else {
-                $this->model::create($request->all());
+                if($data = $this->model::find($id)){
+                    $data->update($request->all());
+                    if ($request->hasFile('file_foto')) {
+                        $data->file()->update([
+                            'data'                      =>  [
+                                'disk'      => config('filesystems.default'),
+                                'target'    => Storage::putFile($this->kode.'/slider/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file_foto')),
+                            ]
+                        ]);
+                    }
+                }
                 $respon=['status'=>true, 'pesan'=>'Data berhasil disimpan'];
             }
             return $respon;
@@ -110,12 +122,24 @@ class opdController extends Controller
         if ($request->ajax()) {
             $validator=Validator::make($request->all(), [
                 'nama'              => 'required|'.config('master.regex.json'),
+                'file_foto'        => $request->hasFile('file_foto') ? 'required|mimes:jpg,png,jpeg' : ''
             ]);
             if ($validator->fails()) {
                 $response=['status'=>FALSE, 'pesan'=>$validator->messages()];
             }
             else {
-                $this->model::find($id)->update($request->all());
+                if($data = $this->model::find($id)){
+                    $data->update($request->all());
+                    if ($request->hasFile('file_foto')) {
+                        $data->file()->update(['name'=>'opd'],[
+                            'name'                  => 'opd',
+                            'data'                      =>  [
+                                'disk'      => config('filesystems.default'),
+                                'target'    => Storage::putFile($this->kode.'/foto/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file_foto')),
+                            ]
+                        ]);
+                    }
+                }
                 $respon=['status'=>true, 'pesan'=>'Data berhasil diubah'];
             }
             return $response ?? ['status'=>TRUE, 'pesan'=>['msg'=>'Data berhasil diubah']];

@@ -68,6 +68,7 @@ return [
     'status_foto'=>[
         'galeri'               => '0',
         'slider'               => '1',
+        'opd'                  => '2',
     ],
     'status_kelola'=>[
         '0'               => 'Sub Elemen',

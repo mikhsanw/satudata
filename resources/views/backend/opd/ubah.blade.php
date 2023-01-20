@@ -5,6 +5,14 @@
             {!! Form::label('nama', 'Masukkan Judul', array('class' => 'control-label')) !!}
             {!! Form::text('nama', $data->nama, array('id' => 'nama', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
+        <p>
+            {!! Form::label('singkatan', 'Masukkan singkatan', array('class' => 'control-label')) !!}
+            {!! Form::text('singkatan', $data->singkatan, array('id' => 'singkatan', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+        </p>
+        <p>
+            {!! Form::label('file_foto', 'Upload Gambar', array('class' => 'control-label')) !!}
+            {!! Form::file('file_foto', null, array('id' => 'file_foto', 'class' => 'form-control')) !!}
+        </p>
     </div>
     @if($data->file)
         <div class="col-md-12">

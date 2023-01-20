@@ -5,6 +5,14 @@
             {!! Form::label('nama', 'Masukkan Nama', array('class' => 'control-label')) !!}
             {!! Form::text('nama', null, array('id' => 'nama', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
+        <p>
+            {!! Form::label('singkatan', 'Masukkan singkatan', array('class' => 'control-label')) !!}
+            {!! Form::text('singkatan', null, array('id' => 'singkatan', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+        </p>
+        <p>
+            {!! Form::label('file_foto', 'Upload Gambar', array('class' => 'control-label')) !!}
+            {!! Form::file('file_foto', null, array('id' => 'file_foto', 'class' => 'form-control')) !!}
+        </p>
     </div>
 	{!! Form::hidden('table-list', 'datatable', array('id' => 'table-list')) !!}
 </div>
