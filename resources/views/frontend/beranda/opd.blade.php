@@ -34,21 +34,64 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>SATU DATA KABUPATEN BENGKALIS</h2>
-        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
+        <h2>{{$dataOpd->nama}}</h2>
+        <p>Data Pada {{ucfirst($dataOpd->nama)}} Kabupaten Bengkalis</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-4">
-          <img src="{{asset('images/satu-data.png')}}" height="200" width="400" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content">
-          <h3>Tentang Satu Data</h3>
-          <p class="text-justify">
-          Merupakan salah satu aplikasi yang dibangun oleh Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis. Dibuat dengan tujuan sebagai media untuk penyajian data informasi spesifik dari Data Sektoral dan Data Spasial. 
-          Aplikasi ini dikelola oleh bidang Statistik yang ada di Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis yang bekerjasama dengan Organisasi Perangkat Daerah (OPD) lingkup Pemerintah Kabupaten Bengkalis. 
-          Diharapkan dengan adanya aplikasi Satu Data ini, bisa membantu masyarakat/akademisi/pengusaha/instansi pemerintahan dalam mendapatkan data yang valid serta up to date.
-          </p>
+        <div class="col-lg-12">
+          <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button" onclick="openTab('tabel')">Tabel</button>
+            <button class="w3-bar-item w3-button" onclick="openTab('grafik')">Grafik</button>
+          </div>
+
+          <div id="tabel" class="tab">
+            {{-- <h2>Menampilkan data dalam bentuk tabel</h2> --}}
+            <table id="" class="table table-bordered table-hover table-striped table-responsive">
+              <thead class="bg-primary-600">
+                  <tr>
+                    <td rowspan="2" style="vertical-align : middle; text-align:center;">No</td>
+                    <td rowspan="2" style="vertical-align : middle; text-align:center;">Elemen / Sub Elemen</td>
+                    <td rowspan="2" style="vertical-align : middle; text-align:center;">Satuan</td>
+                    <td rowspan="2" style="vertical-align : middle; text-align:center;">Produsen Data</td>
+                    <td rowspan="2" style="vertical-align : middle; text-align:center;">Ketersediaan Data</td>
+                    <td colspan="{{count($tahuns)}}" style="vertical-align : middle; text-align:center;">Tahun Produksi</td>
+                    <td rowspan="2" style="vertical-align : middle;text-align:center;">Catatan</td>
+                  </tr>
+                  <tr>
+                    @foreach($tahuns as $th)
+                    <td style="vertical-align : middle;text-align:center;">{{$tahun[]=$th}}</td>
+                    @endforeach
+                  </tr>
+                </thead>
+                <tbody>
+                  @php $i=1; @endphp
+                  @foreach($datas as $data)
+                    <tr>
+                      <td style="font-weight: bold; text-align: center;">{{$i}}</td>
+                      <td style="font-weight: bold;">{{$data->nama??''}}</td>
+                      <td style="text-align: center;">{{$data->satuan??''}}</td>
+                      <td>{{($data->opd->nama??'')}}</td>
+                      <td style="text-align: center;">{{(count($data->data)>0)?'Ada':''}}</td>
+                      @foreach($tahun as $th)
+                        <td style="text-align: center;">{{$elemen->filterjumlah($data->id??'',$th)->jumlah??''}}</td>
+                      @endforeach
+                      <td>{{$data->keterangan??''}}</td>
+                    </tr>
+                    @php $tes=''; @endphp
+                    @foreach($data->children as $key => $item)
+                      @include('backend.laporan.loop')
+                    @endforeach
+                    @php $i++; @endphp
+                  @endforeach
+                </tbody>
+              </table>
+          </div>
+          
+          <div id="grafik" class="tab" style="display:none">
+            <h2>Menampilkan data dalam bentuk grafik</h2>
+          </div>
+          
         </div>
       </div>
 
@@ -57,3 +100,14 @@
 
 </main><!-- End #main -->
 @endsection
+
+<script>
+  function openTab(tabName) {
+    var i;
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(tabName).style.display = "block";  
+  }
+  </script>

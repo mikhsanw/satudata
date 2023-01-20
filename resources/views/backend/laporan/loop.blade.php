@@ -1,12 +1,12 @@
 @php $tes=$tes.('.'.$key+1); @endphp
 <tr>
-    <td>{{$i.$tes}} </td>
+    <td style="text-align: center;">{{$i.$tes}} </td>
     <td>{{$item->nama}}</td>
     <td>{{$item->satuan??''}}</td>
     <td>{{($data->opd->nama??'')}}</td>
-    <td>{{(count($item->data)>0)?'Ada':''}}</td>
+    <td style="text-align: center;">{{(count($item->data)>0)?'Ada':''}}</td>
     @foreach($tahun as $th)
-        <td>{{$elemen->filterjumlah($item->id??'',$th)->jumlah??''}}</td>
+        <td style="text-align: center;">{{$elemen->filterjumlah($item->id??'',$th)->jumlah??''}}</td>
     @endforeach
     <td>{{$item->keterangan??''}}</td>
 </tr>

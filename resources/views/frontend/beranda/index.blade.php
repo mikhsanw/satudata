@@ -35,7 +35,7 @@
 
       <div class="section-title">
         <h2>SATU DATA KABUPATEN BENGKALIS</h2>
-        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
+        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-Data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
       </div>
 
       <div class="row">
@@ -370,7 +370,7 @@
               <h4>Bupati Bengkalis</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Saya Yakin Dengan Adanya Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Semoga Penilaian dan Predikat Kabupaten Bengkalis Terus Menjadi Yang Terbaik Untuk Terwujudnya Bengkalis BERMASA.
+                Saya Yakin Dengan Adanya Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka, Untuk Mewujudkan Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -383,7 +383,7 @@
               <h4>Wakil Bupati Bengkalis</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Mudah-mudahan Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Terus Memberikan Yang Terbaik Dalam Penilaian Capaian Kinerja dalam mendukung terwujudnya Kabupaten Bengkalis Yang BERMASA.
+                Mudah-mudahan Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Data-Data Atau Informasi Dari Perangkat Daerah Dilingkungan Pemerintah Kabupaten Bengkalis Yang Akurat, Akuntabel dan Transparan dalam mendukung terwujudnya Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -396,7 +396,7 @@
               <h4>Sekretaris Daerah</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Semoga Dengan Aplikasi Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Bisa Selalu Memberikan Hasil Penilaian Capaian Kinerja Yang Terbaik Untuk Mewujudkan Kabupaten Bengkalis Yang BERMASA.
+                Semoga Dengan Aplikasi Satu Data Kabupaten Bengkalis Bisa Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Bisa Memberikan Informasi Kepada Masyarakat Banyak Demi Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -409,7 +409,7 @@
               <h4>Kepala Dinas Komunikasi Informatika dan Statistik</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Akan Terus Berupaya Untuk Memberikan Penilaian Capaian Kinerja Dalam Mendukung Terwujudnya Visi Kabupaten Bengkalis Yang BERMASA.
+                Aplikasi Satu Data Yang Dibuat Bidang Pengelolaan Berbasis Elektronik Di Dinas Komunikasi Informatika dan Statistik Akan Terus Berupaya Memberikan Yang Terbaik Dalam Mendukung Terwujudnya Visi dan Misi Kabupaten Bengkalis dan Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -422,7 +422,7 @@
               <h4>Kepala Bidang Statistik dan Persandian</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Sistem Informasi Capaian Kinerja Elektronik Kabupaten Bengkalis (SICAKEB) Akan Terus Berupaya Untuk Memberikan Penilaian Capaian Kinerja Dalam Mendukung Terwujudnya Visi Kabupaten Bengkalis Yang BERMASA.
+                Aplikasi Satu Data Yang Kami Kelola Akan Memberikan Data-Data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -469,31 +469,8 @@
 
         </div>
 
-        <div class="col-lg-8 mt-5 mt-lg-0">       
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5100263836557!2d102.10877601475414!3d1.4673225989298937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d15fb61176003d%3A0x69600c0570fcb2a2!2sDinas%20Komunikasi%2C%20Informatika%20Dan%20Statistik%20Kabupaten%20Bengkalis!5e0!3m2!1sid!2sid!4v1673957591465!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          {{-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form> --}}
-
+        <div class="col-lg-8 mt-5 mt-lg-0">
+          <iframe style="border-radius:5px;width:100%;height:250px;margin:0px;padding:0px;border:1px solid #0880e8;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5100263836557!2d102.10877601475414!3d1.4673225989298937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d15fb61176003d%3A0x69600c0570fcb2a2!2sDinas%20Komunikasi%2C%20Informatika%20Dan%20Statistik%20Kabupaten%20Bengkalis!5e0!3m2!1sid!2sid!4v1673957591465!5m2!1sid!2sid" allowfullscreen="" aria-hidden="false"></iframe>
         </div>
 
       </div>
