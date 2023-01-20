@@ -74,8 +74,9 @@ return [
         '1'               => 'Kelengkapan dan Jumlah Data',
     ],
     'tingkatandaerah'=>[
-        '0'           => 'Kecamatan',
-        '1'           => 'Desa',
+        '0'           => 'Kabupaten',
+        '1'           => 'Kecamatan',
+        '2'           => 'Desa',
     ],
     
 ];
