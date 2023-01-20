@@ -18,11 +18,11 @@
 <main id="main">
 
   <!-- ======= About Section ======= -->
-  <section id="detail" class="about">
+  <section id="cari" class="about">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#detail')}}">
+        <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#cari')}}">
           <div class="row m-0">
             <div class="col-lg-10 col-md-5 col-sm-12 p-0">
               <div class="form-group">
@@ -45,7 +45,7 @@
         <ul>
           @foreach($elemen as $data)
           <li>
-            <a href="{{url('caridetail/'.$data->id)}}#detail" style="color:red;">
+            <a href="{{url('caridetail/'.$data->id)}}#cari" style="color:red;">
               {{$data->nama}}
             </a>
           </li>
