@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\foto;
 use App\Model\Opd;
 use App\Model\Elemen;
+use App\Model\Data;
 use App\Exports\PencarianExport;
 use Maatwebsite\Excel\Facades\Excel;
 class frontendController extends Controller
@@ -124,6 +125,21 @@ class frontendController extends Controller
     public function export($id) 
     {
         return Excel::download(new PencarianExport($id), $id.'.xlsx');
+    }
+    public function chart($id) 
+    {
+        $query=Data::whereElemenId($id)->orderBy('tahun','desc')->get();
+        $jumlah=array();
+        $tahun=array();
+        foreach($query as $qr){
+            $jumlah[]=$qr->jumlah;
+            $tahun[]=$qr->tahun;
+        }
+        $data = [
+            'jumlah' => $jumlah,
+            'tahun' => $tahun
+        ];
+        return $data;
     }
 
 }

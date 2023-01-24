@@ -9,6 +9,11 @@
         <td>{{$elemen->filterjumlah($item->id??'',$th)->jumlah??''}}</td>
     @endforeach
     <td>{{$item->keterangan??''}}</td>
+    <td>
+    @if(count($item->data)>0)
+        <a href="#modalChart" data-lightbox="inline" class="button button-large button-rounded modalChart" id="{{$item->id}}"><i class="fa fa-pie-chart" style="font-size:25px;color:red"></i></a>
+    @endif
+    </td>
 </tr>
 @foreach($item->children as $key => $item)
     @include('frontend.beranda.cari.loop')
