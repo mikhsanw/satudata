@@ -76,7 +76,7 @@
                 <td>{{$datas->keterangan??''}}</td>
                 <td>
                   @if(count($datas->data)>0)
-                  <a href="#modalChart" data-toggle="tooltip" data-placement="top" class="button button-large button-rounded modalChart" id="{{$datas->id}}"><i class="fa fa-pie-chart" style="font-size:25px;color:red"></i></a>
+                  <a href="#modalChart" data-toggle="tooltip" data-placement="top" class="button button-large button-rounded modalChart" title="{{$datas->nama??''}}" id="{{$datas->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
                   @endif
                 </td>
               </tr>
@@ -93,8 +93,8 @@
     <!-- modalChart -->
     <div class="modal1 mfp-hide" id="modalChart">
       <div class="block mx-auto" style="background-color: #FFF; max-width: 800px;">
-        <div class="center" style="padding: 50px;">
-          <h3>A Simple Example of a Text Modal</h3>
+        <div class="title center" style="padding: 50px;">
+          <h3>Grafik Data Per Tahun</h3>
           <div class="bottommargin mx-auto" style="max-width: 100%; min-height: 350px;">
 						<canvas id="chart-0"></canvas>
 					</div>
@@ -128,6 +128,9 @@
   $(document).on("click",".modalChart",function() {
 		var label = ['2010','2021','2010','2021','2010'];
     var id = $(this).attr('id');
+    var title = $(this).attr('title');
+    console.log(title);
+    $('<h3>'+title+'</h3>').appendTo('.title');
     $.ajax({
       type: "GET",
       url: "{{url('chart')}}/"+id,
@@ -136,7 +139,7 @@
           console.log(data);
           var ctx = document.getElementById("chart-0").getContext("2d");
           window.myPie = new Chart(ctx, {
-            type: 'pie',
+            type: 'bar',
             data: {
               datasets: [{
                 data: data.jumlah,
@@ -147,7 +150,7 @@
                   window.chartColors.green,
                   window.chartColors.blue,
                 ],
-                label: 'Dataset 1'
+                label: data.tahun
               }],
               labels: data.tahun
             },
