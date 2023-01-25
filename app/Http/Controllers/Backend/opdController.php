@@ -25,6 +25,10 @@ class opdController extends Controller
         if ($request->ajax()) {
             $data= $this->model::all();
             return Datatables::of($data)->addIndexColumn()
+                ->addColumn('gambar', function($q){
+                    $file = $q->file?'<div style="text-align: center;"><img src="'.url($q->file->url_stream).'?t='.time().'" width="80px"></div>':null;
+                    return $file ?? NULL;
+                })
                 ->addColumn('action', '<div style="text-align: center;">
                <a class="edit ubah" data-toggle="tooltip" data-placement="top" title="Edit" '.$this->kode.'-id="{{ $id }}" href="#edit-{{ $id }}">
                    <i class="fa fa-edit text-warning"></i>
@@ -32,7 +36,7 @@ class opdController extends Controller
                <a class="delete hidden-xs hidden-sm hapus" data-toggle="tooltip" data-placement="top" title="Delete" href="#hapus-{{ $id }}" '.$this->kode.'-id="{{ $id }}">
                    <i class="fa fa-trash text-danger"></i>
                </a>
-           </div>')->rawColumns(['action'])->make(TRUE);
+           </div>')->rawColumns(['gambar','action'])->make(TRUE);
         }
         else {
             exit("Not an AJAX request -_-");
