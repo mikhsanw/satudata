@@ -6,15 +6,25 @@
             {!! Form::text('nama', $data->nama, array('id' => 'nama', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
-            {!! Form::label('file', 'Pilih File', array('class' => 'control-label')) !!}
-            <small class="fa fa-info-circle text-danger"> Ekstensi. Pdf / Zip/ Rar</small><br>
+            {!! Form::label('file', 'Unggah Buku', array('class' => 'control-label')) !!}
+            <small class="fa fa-info-circle text-danger"> Ekstensi .pdf</small><br>
             {!! Form::file('file', null, array('id' => 'file', 'class' => 'form-control')) !!}
         </p>
+        <p>
+            {!! Form::label('gambar', 'Unggah Cover', array('class' => 'control-label')) !!}
+            <small class="fa fa-info-circle text-danger"> Ekstensi .Jpg/.Png/.Jpeg</small><br>
+            {!! Form::file('gambar', null, array('id' => 'gambar', 'class' => 'form-control')) !!}
+        </p>
     </div>
-    <div class="col-md-12">
-    @if($data->file)
-        @if($data->file->extension=='pdf')
-        <object data="{{$data->file->url_stream.'?t='.time() ?? '#'}}" type="application/pdf" style="background: transparent url({{asset('backend/img/loading.gif')}}) no-repeat center; width: 100%;height: 700px">
+    <div class="col-4">
+    @if($data->file && $data->file->getFileName($data->id,'gambar'))
+            <img src="{{$data->file->getFileName($data->id,'gambar')->url_stream.'?t='.time() ?? '#'}}" style="background: transparent url({{asset('backend/img/loading.gif')}}) no-repeat center; width: 100%"/>
+    @endif
+    </div>
+    <div class="col-8">
+    @if($data->file && $data->file->getFileName($data->id,'buku'))
+        @if($data->file->getFileName($data->id,'buku')->extension=='pdf')
+        <object data="{{$data->file->getFileName($data->id,'buku')->url_stream.'?t='.time() ?? '#'}}" type="application/pdf" style="background: transparent url({{asset('backend/img/loading.gif')}}) no-repeat center; width: 100%;height: 700px">
             <p>
                 File PDF tidak dapat ditampilkan, silahkan download file
                 <a download="{{$data->file->nama}}" href="{{$data->file->url_stream ?? '#'}}"><span class="fa fa-download"> di sini</span></a>

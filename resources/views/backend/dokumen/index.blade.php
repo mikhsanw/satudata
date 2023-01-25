@@ -15,6 +15,7 @@
 					<th class="width-1">No</th>
 					<th class="text-center">Nama</th>
 					<th class="text-center">File</th>
+					<th class="text-center">Cover</th>
 					<th width="50px" class="text-center" tabindex="0" rowspan="1" colspan="1">Aksi</th>
 				</tr>
 			</thead>

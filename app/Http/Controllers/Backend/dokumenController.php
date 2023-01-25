@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Storage;
+use App\Model\File;
 
 class dokumenController extends Controller
 {
@@ -22,11 +23,15 @@ class dokumenController extends Controller
 
     public function data(Request $request)
     {
-        if ($request->ajax()) {
+        // if ($request->ajax()) {
             $data= $this->model::whereStatus(config('master.status_dokumen.buku'))->latest()->get();
             return Datatables::of($data)->addIndexColumn()
                 ->addColumn('file', function($q){
-                    $file = $q->file?'<div style="text-align: center;"><a href="'.url($q->file->extension=='pdf' ? $q->file->url_stream : $q->file->url_download).'?t='.time().'" target="_blank" class="text-info"><i class="fa fa-search text-info"></i></a></div>':null;
+                    $file = $q->file && $q->file->getFileName($q->id,'buku')?'<div style="text-align: center;"><a href="'.url($q->file->getFileName($q->id,'buku')->extension==='pdf'?$q->file->getFileName($q->id,'buku')->url_stream : $q->file->getFileName($q->id,'buku')->url_download).'?t='.time().'" target="_blank" class="text-info"><i class="fa fa-search text-info"></i></a></div>':null;
+                    return $file ?? NULL;
+                })
+                ->addColumn('gambar', function($q){
+                    $file = $q->file && $q->file->getFileName($q->id,'gambar')?'<div style="text-align: center;"><img src="'.url($q->file->getFileName($q->id,'gambar')->url_stream).'?t='.time().'" width="80px"></div>':null;
                     return $file ?? NULL;
                 })
                 ->addColumn('action', '<div style="text-align: center;">
@@ -36,11 +41,11 @@ class dokumenController extends Controller
                <a class="delete hidden-xs hidden-sm hapus" data-toggle="tooltip" data-placement="top" title="Delete" href="#hapus-{{ $id }}" '.$this->kode.'-id="{{ $id }}">
                    <i class="fa fa-trash text-danger"></i>
                </a>
-           </div>')->rawColumns(['file','action'])->make(TRUE);
-        }
-        else {
-            exit("Not an AJAX request -_-");
-        }
+           </div>')->rawColumns(['file','gambar','action'])->make(TRUE);
+        // }
+        // else {
+        //     exit("Not an AJAX request -_-");
+        // }
     }
     /**
      * Show the form for creating a new resource.
@@ -63,7 +68,8 @@ class dokumenController extends Controller
         if ($request->ajax()) {
             $validator=Validator::make($request->all(), [
                 'nama'             => 'required|'.config('master.regex.json'),
-                'file'        => 'required|mimes:pdf'
+                'file'        => 'required|mimes:pdf',
+                'gambar'        => 'required|mimes:jpg,png,jpeg'
                 ]);
             if ($validator->fails()) {
                 $respon=['status'=>false, 'pesan'=>$validator->messages()];
@@ -73,9 +79,19 @@ class dokumenController extends Controller
                 $data = $this->model::create($request->all());
                 if ($request->hasFile('file')) {
                     $data->file()->create([
+                        'name'                  => 'buku',
                         'data'                      =>  [
                             'disk'      => config('filesystems.default'),
                             'target'    => Storage::putFile($this->kode.'/buku/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file')),
+                        ]
+                    ]);
+                }
+                if ($request->hasFile('gambar')) {
+                    $data->file()->create([
+                        'name'                  => 'gambar',
+                        'data'                      =>  [
+                            'disk'      => config('filesystems.default'),
+                            'target'    => Storage::putFile($this->kode.'/buku/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('gambar')),
                         ]
                     ]);
                 }
@@ -125,7 +141,8 @@ class dokumenController extends Controller
         if ($request->ajax()) {
             $validator=Validator::make($request->all(), [
                 'nama'             => 'required|'.config('master.regex.json'),
-                'file'             => $request->hasFile('file') ? 'required|mimes:pdf' : ''
+                'file'             => $request->hasFile('file') ? 'required|mimes:pdf' : '',
+                'gambar'           => $request->hasFile('gambar') ? 'required|mimes:jpg,png,jpeg' : ''
             ]);
             if ($validator->fails()) {
                 $response=['status'=>FALSE, 'pesan'=>$validator->messages()];
@@ -135,10 +152,19 @@ class dokumenController extends Controller
                     $data->update($request->all());
                     if ($request->hasFile('file')) {
                         $data->file()->updateOrCreate(['name'=>'buku'],[
-                            'name'                  => 'opd',
+                            'name'                  => 'buku',
                             'data'                      =>  [
                                 'disk'      => config('filesystems.default'),
                                 'target'    => Storage::putFile($this->kode.'/buku/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file')),
+                            ]
+                        ]);
+                    }
+                    if ($request->hasFile('gambar')) {
+                        $data->file()->updateOrCreate(['name'=>'gambar'],[
+                            'name'                  => 'gambar',
+                            'data'                      =>  [
+                                'disk'      => config('filesystems.default'),
+                                'target'    => Storage::putFile($this->kode.'/buku/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('gambar')),
                             ]
                         ]);
                     }
