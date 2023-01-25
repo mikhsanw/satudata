@@ -217,8 +217,8 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box iconbox-blue">
             <div class="icon">
-              
-            </div>
+                <i class="bx bx-file"></i>
+              </div>
             <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
             <p>LIHAT DATA</p>
           </div>
