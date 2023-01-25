@@ -11,7 +11,7 @@
     <td>{{$item->keterangan??''}}</td>
     <td>
     @if(count($item->data)>0)
-        <a href="#modalChart" data-lightbox="inline" class="button button-large button-rounded modalChart" title="{{$datas->nama??''}}" id="{{$item->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
+        <a href="#modalChart" data-lightbox="inline" class="button button-large button-rounded modalChart" title="{{$item->nama??''}}" id="{{$item->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
     @endif
     </td>
 </tr>

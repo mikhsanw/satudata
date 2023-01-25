@@ -70,6 +70,9 @@ return [
         'slider'               => '1',
         'opd'                  => '2',
     ],
+    'status_dokumen'=>[
+        'buku'               => '0',
+    ],
     'status_kelola'=>[
         '0'               => 'Sub Elemen',
         '1'               => 'Kelengkapan dan Jumlah Data',

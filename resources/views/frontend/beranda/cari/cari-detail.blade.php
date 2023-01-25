@@ -93,8 +93,8 @@
     <!-- modalChart -->
     <div class="modal1 mfp-hide" id="modalChart">
       <div class="block mx-auto" style="background-color: #FFF; max-width: 800px;">
-        <div class="title center" style="padding: 50px;">
-          <h3>Grafik Data Per Tahun</h3>
+        <div class="center" style="padding: 50px;">
+          <h3 class="title">Grafik Data Per Tahun</h3>
           <div class="bottommargin mx-auto" style="max-width: 100%; min-height: 350px;">
 						<canvas id="chart-0"></canvas>
 					</div>
@@ -130,7 +130,7 @@
     var id = $(this).attr('id');
     var title = $(this).attr('title');
     console.log(title);
-    $('<h3>'+title+'</h3>').appendTo('.title');
+    $('.title').html(title);
     $.ajax({
       type: "GET",
       url: "{{url('chart')}}/"+id,

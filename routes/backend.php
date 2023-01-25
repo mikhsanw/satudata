@@ -118,5 +118,11 @@ Route::group(['prefix' => config('master.url.admin')], function () {
         });
         Route::resource('aplikasi', 'aplikasiController');   
 
+        // slider
+        Route::prefix('dokumen')->as('dokumen')->group(function () {
+            Route::get('/data', 'dokumenController@data');
+            Route::get('/hapus/{id}', 'dokumenController@hapus');
+        });
+        Route::resource('dokumen', 'dokumenController');
     });
 });
