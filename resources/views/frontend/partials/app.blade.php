@@ -65,4 +65,3 @@
 @stack('js')
 </body>
 </html>
-
