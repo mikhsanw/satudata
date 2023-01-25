@@ -218,7 +218,7 @@
           <div class="icon-box iconbox-blue">
             <div class="icon">
                 {{-- <i class="bx bx-file"></i> --}}
-                <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 150px;">
+                <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
               </div>
             <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
             <p>LIHAT DATA</p>
