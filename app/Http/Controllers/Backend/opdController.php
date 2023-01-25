@@ -129,7 +129,7 @@ class opdController extends Controller
                 if($data = $this->model::find($id)){
                     $data->update($request->all());
                     if ($request->hasFile('file_foto')) {
-                        $data->file()->update(['name'=>'opd'],[
+                        $data->file()->updateOrCreate(['name'=>'opd'],[
                             'name'                  => 'opd',
                             'data'                      =>  [
                                 'disk'      => config('filesystems.default'),
