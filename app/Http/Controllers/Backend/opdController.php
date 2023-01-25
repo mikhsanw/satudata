@@ -65,16 +65,14 @@ class opdController extends Controller
                 $respon=['status'=>false, 'pesan'=>$validator->messages()];
             }
             else {
-                if($data = $this->model::find($id)){
-                    $data->update($request->all());
-                    if ($request->hasFile('file_foto')) {
-                        $data->file()->update([
-                            'data'                      =>  [
-                                'disk'      => config('filesystems.default'),
-                                'target'    => Storage::putFile($this->kode.'/slider/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file_foto')),
-                            ]
-                        ]);
-                    }
+                $data = $this->model::create($request->all());
+                if ($request->hasFile('file_foto')) {
+                    $data->file()->create([
+                        'data'                      =>  [
+                            'disk'      => config('filesystems.default'),
+                            'target'    => Storage::putFile($this->kode.'/slider/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file_foto')),
+                        ]
+                    ]);
                 }
                 $respon=['status'=>true, 'pesan'=>'Data berhasil disimpan'];
             }
