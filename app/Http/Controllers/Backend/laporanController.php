@@ -12,7 +12,7 @@ class laporanController extends Controller
     public function index()
     {
         $datas = Elemen::whereOpdId(Auth::user()->opd_id)->whereNull('parent_id')->get();
-        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $tahuns = array(date("Y")-5,date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1);
         $elemen = new Elemen;
         return view('backend.laporan.index',['datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
     }

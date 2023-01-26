@@ -116,7 +116,7 @@ class frontendController extends Controller
 
         $data = [
             'datas'=> $elemen,
-            'tahuns' => array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4),
+            'tahuns' => array(date("Y")-5,date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1),
             'elemen' => new Elemen
         ];
         return view('frontend.beranda.cari.cari-detail', $data);
@@ -132,8 +132,11 @@ class frontendController extends Controller
         $jumlah=array();
         $tahun=array();
         foreach($query as $qr){
+            if($qr->tahun!=date("Y"))
+            {
             $jumlah[]=$qr->jumlah;
             $tahun[]=$qr->tahun;
+            }
         }
         $data = [
             'jumlah' => $jumlah,
