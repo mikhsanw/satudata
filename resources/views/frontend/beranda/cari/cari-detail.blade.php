@@ -154,8 +154,8 @@ section {
 }
 
 </style>
-<link rel="stylesheet" media="screen, print" href="{{url('backend/css/vendors.bundle.css')}}">
-    <link rel="stylesheet" media="screen, print" href="{{url('backend/css/app.bundle.css')}}">
+{{-- <link rel="stylesheet" media="screen, print" href="{{url('backend/css/vendors.bundle.css')}}">
+    <link rel="stylesheet" media="screen, print" href="{{url('backend/css/app.bundle.css')}}"> --}}
     <link rel="stylesheet" media="screen, print" href="{{url('resources/vendor/font-awesome/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{url('frontend/css/magnific-popup.css')}}" type="text/css" />
 @endpush

@@ -39,7 +39,7 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 table-wrapper-scroll-x">
           {{-- <div class="w3-bar w3-black">
             <button class="w3-bar-item w3-button" onclick="openTab('tabel')">Tabel</button>
             <button class="w3-bar-item w3-button" onclick="openTab('grafik')">Grafik</button>
@@ -47,7 +47,7 @@
 
           {{-- <div id="tabel" class="tab"> --}}
             {{-- <h2>Menampilkan data dalam bentuk tabel</h2> --}}
-            <table id="" class="table table-bordered table-hover table-striped table-responsive">
+            <table id="" class="table table-bordered table-hover table-striped table-responsive" style=" display: block; overflow-x: auto;">
               <thead class="bg-primary-600" style="background-color: #0a58ca; color: white;">
                   <tr>
                     <td rowspan="2" style="vertical-align : middle; text-align:center;">No</td>
@@ -80,7 +80,8 @@
                       <td>{{$data->keterangan??''}}</td>
                       <td>
                         @if(count($data->data)>0)
-                        <a href="#modalChart" data-toggle="tooltip" data-placement="top" class="button button-large button-rounded modalChart" title="{{$data->nama??''}}" id="{{$data->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
+                        <a href="#modalChart" data-lightbox="inline" class="button button-large button-rounded modalChart" title="{{$data->nama??''}}" id="{{$data->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
+
                         @endif
                       </td>
                     </tr>
@@ -136,7 +137,7 @@
 {{-- <link rel="stylesheet" media="screen, print" href="{{url('backend/css/vendors.bundle.css')}}">
     <link rel="stylesheet" media="screen, print" href="{{url('backend/css/app.bundle.css')}}"> --}}
     <link rel="stylesheet" media="screen, print" href="{{url('resources/vendor/font-awesome/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" href="{{url('frontend/css/magnific-popup.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}" type="text/css" />
 @endpush
 @push('js')
 <script src="{{url('frontend/js/jquery.js')}}"></script>
