@@ -35,7 +35,7 @@
             </div>
           </div>
         </form>
-
+        <br>
         <h2>{{$datas->opd->nama}}</h2>
         <h5>{{$datas->nama}}</h5>
       </div>
@@ -76,7 +76,7 @@
                 <td>{{$datas->keterangan??''}}</td>
                 <td>
                   @if(count($datas->data)>0)
-                  <a href="#modalChart" data-toggle="tooltip" data-placement="top" class="button button-large button-rounded modalChart" title="{{$datas->nama??''}}" id="{{$datas->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
+                    <a href="#modalChart" data-lightbox="inline" class="button button-large button-rounded modalChart" title="{{$datas->nama??''}}" id="{{$datas->id}}"><i class="fa fa-bar-chart" style="font-size:25px;color:red"></i></a>
                   @endif
                 </td>
               </tr>
@@ -109,6 +109,51 @@
 </main><!-- End #main -->
 @endsection
 @push('css')
+<style>
+  body {
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial;
+    font-size: .8125rem;
+    letter-spacing: .1px;
+    line-height: 1.47;
+}
+  .bg-primary-600 {
+    background-color: #7a59ad;
+    color: #fff;
+  }
+  .table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+  }
+  .table-bordered td, .table-bordered th {
+  border: 1px solid rgba(0,0,0,.1);
+    /* border: 1px solid #e9e9e9; */
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.btn-primary {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(136, 106, 181, .5);
+    box-shadow: 0 2px 6px 0 rgba(136, 106, 181, .5);
+    color: #fff;
+}
+
+.btn-info {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(33, 150, 243, .5);
+    box-shadow: 0 2px 6px 0 rgba(33, 150, 243, .5);
+    color: #fff;
+}
+.text-right {
+    text-align: right!important;
+}
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+</style>
 <link rel="stylesheet" media="screen, print" href="{{url('backend/css/vendors.bundle.css')}}">
     <link rel="stylesheet" media="screen, print" href="{{url('backend/css/app.bundle.css')}}">
     <link rel="stylesheet" media="screen, print" href="{{url('resources/vendor/font-awesome/css/font-awesome.min.css')}}">
