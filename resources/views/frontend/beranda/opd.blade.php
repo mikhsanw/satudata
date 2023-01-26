@@ -113,7 +113,7 @@
 					</div>
         </div>
         <div class="section center m-0" style="padding: 30px;">
-          <a href="#" class="btn btn-primary" onClick="$.magnificPopup.close();return false;">Close this Modal</a>
+          <a href="#" class="btn btn-primary" onClick="$.magnificPopup.close();return false;">Close</a>
         </div>
       </div>
     </div>
