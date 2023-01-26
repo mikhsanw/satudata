@@ -3,6 +3,7 @@
     <div class="col-md-12">
         <p>
             {!! Form::label('jumlah', 'Masukkan Jumlah', array('class' => 'control-label')) !!}
+            <small class="text-danger"> * Jika bilangan berkoma, gunakan titik (.)</small>
             {!! Form::text('jumlah', $data->jumlah, array('id' => 'jumlah', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>

@@ -2,8 +2,8 @@
 <div class="row">
     <div class="col-md-12">
         <p>
-            <small class="text-danger"> *</small>
             {!! Form::label('jumlah', 'Masukkan jumlah', array('class' => 'control-label')) !!}
+            <small class="text-danger"> * Jika bilangan berkoma, gunakan titik (.)</small>
             {!! Form::text('jumlah', null, array('id' => 'jumlah', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
