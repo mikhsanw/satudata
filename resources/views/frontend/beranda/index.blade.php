@@ -240,59 +240,23 @@
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+      @foreach($buku as $data)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          
           <div class="portfolio-wrap">
-            <img src="{{asset('images/2019.jpg')}}" class="img-fluid" alt="">
+            <img src="{{$data->file->getFileName($data->id,'gambar')->url_stream ?? ''}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Data Buku Statistik Sektoral</h4>
-              <p>Tahun 2019</p>
+              <h4>{{$data->nama}}</h4>
               <div class="portfolio-links">
-                <i class="bx bx-download"></i></a>
+              <a href="{{url($data->file->getFileName($data->id,'buku')->url_stream ?? '')}}" target="blank_">
+                <i class="bx bx-download"></i>
+              </a>
               </div>
             </div>
+            
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="{{asset('images/2020.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Data Buku Statistik Sektoral</h4>
-              <p>Tahun 2020</p>
-              <div class="portfolio-links">
-                <i class="bx bx-download"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="{{asset('images/2021.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Data Buku Statistik Sektoral</h4>
-              <p>Tahun 2021</p>
-              <div class="portfolio-links">
-                <i class="bx bx-download"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="{{asset('images/2022.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Data Buku Statistik Sektoral</h4>
-              <p>Tahun 2022</p>
-              <div class="portfolio-links">
-                <i class="bx bx-download"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      @endforeach
       </div>
 
     </div>

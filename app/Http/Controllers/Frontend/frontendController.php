@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\foto;
 use App\Model\Opd;
 use App\Model\Elemen;
+use App\Model\Dokumen;
 use App\Model\Data;
 use App\Exports\PencarianExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -22,6 +23,7 @@ class frontendController extends Controller
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
             'opd' => Opd::get(),
+            'buku' => Dokumen::get(),
         );
         return view('frontend.beranda.index',$data);
     }
