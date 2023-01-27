@@ -11,11 +11,11 @@ return [
     */
 
     'aplikasi' =>   [
-                        'nama'          => 'Selamat Datang',
-                        'singkatan'     => 'SINGKATAN',
-                        'daerah'        => 'PROVINSI RIAU', // HARUS HURUF BESAR
-                        'kota'          => 'Pekanbaru',
-                        'level'         => 'provinsi', // Kabupaten, kota, provinsi (default)
+                        'nama'          => 'Satu Data',
+                        'singkatan'     => 'SATUDATA',
+                        'daerah'        => 'KABUPATEN BENGKALIS', // HARUS HURUF BESAR
+                        'kota'          => 'Bengkalis',
+                        'level'         => 'Kabupaten', // Kabupaten, kota, provinsi (default)
                         'logo'		    => env('APP_URL').'/backend/img/logo/200.png',
                         'favicon'		=> '/backend/img/logo/50.png',
                         'tema'          => 1, // 1-15
@@ -82,5 +82,12 @@ return [
         '1'           => 'Kecamatan',
         '2'           => 'Desa',
     ],
+    'tahunlaporan'=>[
+        '0' => date("Y")-5,
+        '1' => date("Y")-4,
+        '2' => date("Y")-3,
+        '3' => date("Y")-2,
+        '4' => date("Y")-1
+    ]
     
 ];

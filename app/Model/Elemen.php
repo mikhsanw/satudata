@@ -25,7 +25,7 @@ class Elemen extends Model
 
     public function parent()
     {
-        return $this->belongsTo('App\Model\Elemen', 'parent_id', 'id');
+        return $this->belongsTo('App\Model\Elemen', 'id','parent_id');
     }
 
     public function children()
