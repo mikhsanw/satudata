@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\foto;
 use App\Model\Opd;
 use App\Model\Elemen;
+use App\Model\Dokumen;
 use App\Model\Data;
 use App\Exports\PencarianExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -22,6 +23,7 @@ class frontendController extends Controller
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
             'opd' => Opd::get(),
+            'buku' => Dokumen::get(),
         );
         return view('frontend.beranda.index',$data);
     }
@@ -93,11 +95,19 @@ class frontendController extends Controller
     }
 
     public function opdDetail($id){
+        $tahun5 = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+
+        if (!isset($_GET['tahunawal'], $_GET['tahunakhir'])) {
+            $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+            }else{
+            for ($i = $_GET['tahunawal']; $i <= $_GET['tahunakhir']; $i++){
+                $tahuns[]=$i;
+            }
+        }
         $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->get();
-        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
         $elemen = new Elemen;
         $dataOpd = Opd::findOrFail($id);
-        return view('frontend.beranda.opd', compact('dataOpd','tahuns', 'elemen','datas'));
+        return view('frontend.beranda.opd', compact('dataOpd','tahuns', 'elemen','datas', 'tahun5'));
     }
 
     public function cari(Request $request){

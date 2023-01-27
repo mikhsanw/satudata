@@ -37,7 +37,26 @@
         <h2>{{$dataOpd->nama}}</h2>
         <p>Data Pada {{ucfirst($dataOpd->nama)}} Kabupaten Bengkalis</p>
       </div>
-
+      <div class="pilihtahun">
+        <form action="">
+          <label for="">Pilih Rentang Tahun : </label>
+          <select name="tahunawal" id="">
+            <option value="">--Pilih--</option>
+            @foreach (array_reverse($tahun5) as $th)
+            <option value="{{$th}}">{{$th}}</option>
+            @endforeach
+          </select>
+          <select name="tahunakhir" id="">
+            <option value="">--Pilih--</option>
+            @foreach (array_reverse($tahun5) as $th)
+            <option value="{{$th}}">{{$th}}</option>
+            @endforeach
+          </select>
+          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+            <button type="submit" class="btn btn-primary full-width"><i class="bx bx-search"></i> Cari</button>
+          </div>
+        </form>
+      </div>
       <div class="row">
         <div class="col-lg-12 table-wrapper-scroll-x">
           {{-- <div class="w3-bar w3-black">
