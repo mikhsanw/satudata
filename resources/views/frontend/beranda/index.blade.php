@@ -244,11 +244,11 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           
           <div class="portfolio-wrap">
-            <img src="{{$data->file->getFileName($data->id,'gambar')->url_stream ?? ''}}" class="img-fluid" alt="">
+            <img src="{{$data->file ? $data->file->getFileName($data->id,'gambar')->url_stream : ''}}" width="100%" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{$data->nama}}</h4>
               <div class="portfolio-links">
-              <a href="{{url($data->file->getFileName($data->id,'buku')->url_stream ?? '')}}" target="blank_">
+              <a href="{{$data->file ? url($data->file->getFileName($data->id,'buku')->url_stream) : ''}}" target="blank_">
                 <i class="bx bx-download"></i>
               </a>
               </div>
