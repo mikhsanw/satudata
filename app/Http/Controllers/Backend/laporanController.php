@@ -14,7 +14,7 @@ class laporanController extends Controller
     {
         $opds = Opd::all();
 
-        if(Auth::user()->aksesgrup_id == 2){
+        if(Auth::user()->level == 2){
             $datas = Elemen::whereOpdId(Auth::user()->opd_id)->whereNull('parent_id')->get();
         }else{
             $datas = Elemen::whereNull('parent_id')->get();
