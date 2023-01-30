@@ -2,6 +2,7 @@
 @push('title',ucwords(strtolower($halaman->nama)))
 @push('header',ucwords(strtolower($halaman->nama)))
 @section('content')
+@if(Auth::user()->level != 2)
 <div class="container">
 	<form method="get" action="{{url('laporan/opd')}}">
 		<div class="row">
@@ -17,6 +18,7 @@
 		</div>
 	</form>
 </div>
+@endif
 <div class="panel-container show">
 	<div class="panel-content">
 		<table id="" class="table table-bordered table-hover table-striped table-responsive">

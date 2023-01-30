@@ -5,7 +5,7 @@
             <div id="panel-1" class="panel">
                 <div class="panel-hdr">
                     <h2>
-                        <span class="fa fa-home"></span> &nbsp;Beranda
+                        <span class="fa fa-home"></span> &nbsp;Selamat Datang di Aplikasi SATU DATA Kabupaten Bengkalis
                     </h2>
                     <div class="panel-toolbar">
                         <div class="btn-group">
