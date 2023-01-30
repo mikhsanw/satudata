@@ -19,7 +19,7 @@
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: [license-url] -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-      Designed by <a href="https://bengkaliskab.go.id/">TIM IT PBE Diskominfotik Kabupaten Bengkalis</a>
+      Designed by <a href="https://bengkaliskab.go.id/"  target="_blank">TIM IT PBE Diskominfotik Kabupaten Bengkalis</a>
     </div>
   </div>
 </footer><!-- End Footer -->
