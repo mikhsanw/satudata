@@ -123,7 +123,14 @@
               labels: data.tahun
             },
             options: {
-              responsive: true
+				responsive: true,
+				scales: {
+					yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+					}]
+				}
             }
           });
       },

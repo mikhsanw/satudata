@@ -138,7 +138,8 @@ class frontendController extends Controller
     }
     public function chart($id) 
     {
-        $query=Data::whereElemenId($id)->orderBy('tahun','desc')->get();
+        
+        $query=Data::whereElemenId($id)->whereIn('tahun',config('master.tahunlaporan'))->orderBy('tahun','desc')->get();
         $jumlah=array();
         $tahun=array();
         foreach($query as $qr){
