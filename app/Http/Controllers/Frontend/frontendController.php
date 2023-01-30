@@ -95,10 +95,10 @@ class frontendController extends Controller
     }
 
     public function opdDetail($id){
-        $tahun5 = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $tahun5 = config('master.tahunlaporan');
 
         if (!isset($_GET['tahunawal'], $_GET['tahunakhir'])) {
-            $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+            $tahuns = config('master.tahunlaporan');
             }else{
             for ($i = $_GET['tahunawal']; $i <= $_GET['tahunakhir']; $i++){
                 $tahuns[]=$i;
@@ -126,7 +126,7 @@ class frontendController extends Controller
 
         $data = [
             'datas'=> $elemen,
-            'tahuns' => array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4),
+            'tahuns' => config('master.tahunlaporan'),
             'elemen' => new Elemen
         ];
         return view('frontend.beranda.cari.cari-detail', $data);

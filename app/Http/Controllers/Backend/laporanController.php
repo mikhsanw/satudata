@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Elemen;
 use App\Model\Opd;
+use App\Model\Data;
 use Illuminate\Support\Facades\Auth;
 
 class laporanController extends Controller
@@ -19,7 +20,7 @@ class laporanController extends Controller
         }else{
             $datas = Elemen::whereNull('parent_id')->get();
         }
-        $tahuns = config('master.tahunlaporan');
+        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
         $elemen = new Elemen;
         return view('backend.laporan.index',['opds'=>$opds,'datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
     }
@@ -27,8 +28,25 @@ class laporanController extends Controller
     {
         $opds = Opd::all();
         $datas = Elemen::whereOpdId($request->opd)->whereNull('parent_id')->get();
-        $tahuns = config('master.tahunlaporan');
+        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
         $elemen = new Elemen;
         return view('backend.laporan.index',['opds'=>$opds,'datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
+    }
+
+    public function chart($id) 
+    {
+        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $query=Data::whereElemenId($id)->whereIn('tahun', $tahuns)->orderBy('tahun','desc')->get();
+        $jumlah=array();
+        $tahun=array();
+        foreach($query as $qr){
+            $jumlah[]=$qr->jumlah;
+            $tahun[]=$qr->tahun;
+        }
+        $data = [
+            'jumlah' => $jumlah,
+            'tahun' => $tahun
+        ];
+        return $data;
     }
 }

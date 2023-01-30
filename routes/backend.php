@@ -73,6 +73,7 @@ Route::group(['prefix' => config('master.url.admin')], function () {
         // Laporan
         Route::prefix('laporan')->as('laporan')->group(function () {
             Route::get('/opd', 'laporanController@opd');
+            Route::get('/chart/{id}', 'laporanController@chart');
         });
         Route::resource('laporan', 'laporanController');
         

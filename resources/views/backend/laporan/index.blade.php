@@ -6,9 +6,9 @@
 	<form method="get" action="{{url('laporan/opd')}}">
 		<div class="row">
 			<div class="col-8">
-				<!-- &nbsp; &nbsp; &nbsp; Perangkat Daerah : -->
+				 Perangkat Daerah :
 				<select onchange="this.form.submit()" style="width: 97% ; height:40px" class="select2" name="opd" id="select2">
-					<option value="0" selected>- pilih opd -</option>
+					<option value="0" selected>- pilih -</option>
 					@foreach($opds as $data)
 					<option value="{{ $data->id }}">{{$data->nama}}</option>
 					@endforeach
@@ -101,7 +101,7 @@
     $('.title').html(title);
     $.ajax({
       type: "GET",
-      url: "{{url('chart')}}/"+id,
+      url: "{{url('laporan/chart')}}/"+id,
       cache: true,
       success: function (data) {
           console.log(data);
