@@ -7,12 +7,12 @@
         </p>
         <p>
             {!! Form::label('file', 'Unggah Buku', array('class' => 'control-label')) !!}
-            <small class="fa fa-info-circle text-danger"> Ekstensi .pdf</small><br>
+            <small class="fa fa-info-circle text-danger"> Ekstensi .pdf (Ukuran Maksimal 10 Mb)</small><br>
             {!! Form::file('file', null, array('id' => 'file', 'class' => 'form-control')) !!}
         </p>
         <p>
             {!! Form::label('gambar', 'Unggah Cover', array('class' => 'control-label')) !!}
-            <small class="fa fa-info-circle text-danger"> Ekstensi .jpg/.png/.jpeg</small><br>
+            <small class="fa fa-info-circle text-danger"> Ekstensi .jpg/.png/.jpeg (Ukuran Gambar : 555 x 786 px)</small><br>
             {!! Form::file('gambar', null, array('id' => 'gambar', 'class' => 'form-control')) !!}
         </p>
     </div>
