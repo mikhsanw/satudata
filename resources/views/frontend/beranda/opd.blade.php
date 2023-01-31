@@ -44,7 +44,7 @@
               <label for="">Tahun Awal</label>
               <select name="tahunawal" id="" class="form-control form-control-sm">
                 <option value="">--Pilih--</option>
-                @foreach (array_reverse($tahun5) as $th)
+                @foreach ($tahun5 as $th)
                 <option value="{{$th}}">{{$th}}</option>
                 @endforeach
               </select> 
@@ -53,7 +53,7 @@
               <label for="">Tahun Akhir</label>
               <select name="tahunakhir" id="" class="form-control form-control-sm">
                 <option value="">--Pilih--</option>
-                @foreach (array_reverse($tahun5) as $th)
+                @foreach ($tahun5 as $th)
                 <option value="{{$th}}">{{$th}}</option>
                 @endforeach
               </select>

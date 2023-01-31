@@ -94,7 +94,6 @@
 <script src="{{url('frontend/js/chart-utils.js')}}"></script>
 <script>
   $(document).on("click",".modalChart",function() {
-		var label = ['2010','2021','2010','2021','2010'];
     var id = $(this).attr('id');
     var title = $(this).attr('title');
 	
