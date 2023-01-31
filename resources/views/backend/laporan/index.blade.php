@@ -99,6 +99,7 @@
 		var label = ['2010','2021','2010','2021','2010'];
     var id = $(this).attr('id');
     var title = $(this).attr('title');
+	
     console.log(title);
     $('.title').html(title);
     $.ajax({
@@ -107,7 +108,17 @@
       cache: true,
       success: function (data) {
           console.log(data);
-          var ctx = document.getElementById("chart-0").getContext("2d");
+          chart(data);
+      },
+      error: function(err) {
+          console.log(err);
+      }
+    });  
+    
+  });
+
+function chart(data){
+	var ctx = document.getElementById("chart-0").getContext("2d");
           window.myPie = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -135,18 +146,11 @@
 				}
             }
           });
-      },
-      error: function(err) {
-          console.log(err);
-      }
-    });  
-    
-  });
-
+}
 </script>
 @endpush
 @push('css')
 <link rel="stylesheet" media="screen, print" href="{{ URL::asset('backend/css/formplugins/select2/select2.bundle.css') }}">
-	<link rel="stylesheet" href="{{url('frontend/css/magnific-popup.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{url('frontend/css/magnific-popup.css')}}" type="text/css" />
 @include('backend.home.datatable-css')
 @endpush
