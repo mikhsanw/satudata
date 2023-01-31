@@ -202,8 +202,8 @@ function chart(data){
 					}
 					}]
 				}
-            }
-          });
+      }
+    });
 }
 
 </script>

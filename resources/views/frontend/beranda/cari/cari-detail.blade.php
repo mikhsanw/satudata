@@ -220,8 +220,8 @@ function chart(data){
 					}
 					}]
 				}
-            }
-          });
+      }
+    });
 }
 </script>
 @endpush

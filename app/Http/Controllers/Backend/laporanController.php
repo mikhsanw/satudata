@@ -20,7 +20,7 @@ class laporanController extends Controller
         }else{
             $datas = Elemen::whereNull('parent_id')->get();
         }
-        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $tahuns = array(date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1,date("Y"));
         $elemen = new Elemen;
         return view('backend.laporan.index',['opds'=>$opds,'datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
     }
@@ -28,14 +28,14 @@ class laporanController extends Controller
     {
         $opds = Opd::all();
         $datas = Elemen::whereOpdId($request->opd)->whereNull('parent_id')->get();
-        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $tahuns = array(date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1,date("Y"));
         $elemen = new Elemen;
         return view('backend.laporan.index',['opds'=>$opds,'datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
     }
 
     public function chart($id) 
     {
-        $tahuns = array(date("Y"),date("Y")-1,date("Y")-2,date("Y")-3,date("Y")-4);
+        $tahuns = array(date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1,date("Y"));
         $query=Data::whereElemenId($id)->whereIn('tahun', $tahuns)->orderBy('tahun','desc')->get();
         $jumlah=array();
         $tahun=array();
