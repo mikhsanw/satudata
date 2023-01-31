@@ -72,8 +72,8 @@ class opdController extends Controller
                 $data = $this->model::create($request->all());
                 if ($request->hasFile('file_foto')) {
                     $data->file()->create([
+                        'name'                  => 'opd',
                         'data'                      =>  [
-                            'name'                  => 'opd',
                             'disk'      => config('filesystems.default'),
                             'target'    => Storage::putFile($this->kode.'/slider/'.date('Y').'/'.date('m').'/'.date('d'),$request->file('file_foto')),
                         ]
