@@ -37,35 +37,35 @@
         <h2>{{$dataOpd->nama}}</h2>
         <p>Data Pada {{ucfirst($dataOpd->nama)}} Kabupaten Bengkalis</p>
       </div>
-      <div class="pilihtahun">
+      <div class="pilihtahun col-lg-12 mb-3">
         <form action="">
-          <label for="">Pilih Rentang Tahun : </label>
-          <select name="tahunawal" id="">
-            <option value="">--Pilih--</option>
-            @foreach (array_reverse($tahun5) as $th)
-            <option value="{{$th}}">{{$th}}</option>
-            @endforeach
-          </select>
-          <select name="tahunakhir" id="">
-            <option value="">--Pilih--</option>
-            @foreach (array_reverse($tahun5) as $th)
-            <option value="{{$th}}">{{$th}}</option>
-            @endforeach
-          </select>
-          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-            <button type="submit" class="btn btn-primary full-width"><i class="bx bx-search"></i> Cari</button>
-          </div>
+          <div class="row">
+            <div class="col-lg-2 form-group">
+              <label for="">Tahun Awal</label>
+              <select name="tahunawal" id="" class="form-control form-control-sm">
+                <option value="">--Pilih--</option>
+                @foreach (array_reverse($tahun5) as $th)
+                <option value="{{$th}}">{{$th}}</option>
+                @endforeach
+              </select> 
+            </div>
+            <div class="col-lg-2 form-group">
+              <label for="">Tahun Akhir</label>
+              <select name="tahunakhir" id="" class="form-control form-control-sm">
+                <option value="">--Pilih--</option>
+                @foreach (array_reverse($tahun5) as $th)
+                <option value="{{$th}}">{{$th}}</option>
+                @endforeach
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 pt-4">
+              <button type="submit" class="btn btn-primary full-width btn-sm"><i class="bx bx-search"></i> Cari</button>
+            </div>
+          </div>          
         </form>
       </div>
       <div class="row">
         <div class="col-lg-12 table-wrapper-scroll-x">
-          {{-- <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button" onclick="openTab('tabel')">Tabel</button>
-            <button class="w3-bar-item w3-button" onclick="openTab('grafik')">Grafik</button>
-          </div> --}}
-
-          {{-- <div id="tabel" class="tab"> --}}
-            {{-- <h2>Menampilkan data dalam bentuk tabel</h2> --}}
             <table id="" class="table table-bordered table-hover table-striped table-responsive" style=" display: block; overflow-x: auto;">
               <thead class="bg-primary-600" style="background-color: #0a58ca; color: white;">
                   <tr>
@@ -112,10 +112,6 @@
                   @endforeach
                 </tbody>
               </table>
-          {{-- </div> --}}
-          
-          {{-- <div id="grafik" class="tab" style="display:none">
-            <h2>Menampilkan data dalam bentuk grafik</h2> --}}
           </div>
           
         </div>
@@ -141,21 +137,8 @@
 </main><!-- End #main -->
 @endsection
 
-<script>
-  function openTab(tabName) {
-    var i;
-    var x = document.getElementsByClassName("tab");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    document.getElementById(tabName).style.display = "block";  
-  }
-  </script>
-
 @push('css')
-{{-- <link rel="stylesheet" media="screen, print" href="{{url('backend/css/vendors.bundle.css')}}">
-    <link rel="stylesheet" media="screen, print" href="{{url('backend/css/app.bundle.css')}}"> --}}
-    <link rel="stylesheet" media="screen, print" href="{{url('resources/vendor/font-awesome/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" media="screen, print" href="{{url('resources/vendor/font-awesome/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}" type="text/css" />
 @endpush
 @push('js')

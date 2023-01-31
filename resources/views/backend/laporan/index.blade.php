@@ -2,14 +2,13 @@
 @push('title',ucwords(strtolower($halaman->nama)))
 @push('header',ucwords(strtolower($halaman->nama)))
 @section('content')
-@if(Auth::user()->level != 2)
 <div class="container">
 	<form method="get" action="{{url('laporan/opd')}}">
 		<div class="row">
 			<div class="col-8">
-				 Perangkat Daerah :
+				<!-- &nbsp; &nbsp; &nbsp; Perangkat Daerah : -->
 				<select onchange="this.form.submit()" style="width: 97% ; height:40px" class="select2" name="opd" id="select2">
-					<option value="0" selected>- pilih -</option>
+					<option value="0" selected>- pilih opd -</option>
 					@foreach($opds as $data)
 					<option value="{{ $data->id }}">{{$data->nama}}</option>
 					@endforeach
@@ -18,7 +17,6 @@
 		</div>
 	</form>
 </div>
-@endif
 <div class="panel-container show">
 	<div class="panel-content">
 		<table id="" class="table table-bordered table-hover table-striped table-responsive">
@@ -103,7 +101,7 @@
     $('.title').html(title);
     $.ajax({
       type: "GET",
-      url: "{{url('laporan/chart')}}/"+id,
+      url: "{{url('chart')}}/"+id,
       cache: true,
       success: function (data) {
           console.log(data);
