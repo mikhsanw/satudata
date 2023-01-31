@@ -123,7 +123,7 @@
       <div class="block mx-auto" style="background-color: #FFF; max-width: 800px;">
         <div class="center" style="padding: 50px;">
           <h3 class="title">Grafik Data Per Tahun</h3>
-          <div class="bottommargin mx-auto" style="max-width: 100%; min-height: 350px;">
+          <div class="bottommargin mx-auto" id="graph-container" style="max-width: 100%; min-height: 350px;">
 						<canvas id="chart-0"></canvas>
 					</div>
         </div>
@@ -152,10 +152,10 @@
 <script src="{{url('frontend/js/chart.js')}}"></script>
 <script src="{{url('frontend/js/chart-utils.js')}}"></script>
 <script>
-  $(document).on("click",".modalChart",function() {
-		var label = ['2010','2021','2010','2021','2010'];
+ $(document).on("click",".modalChart",function() {
     var id = $(this).attr('id');
     var title = $(this).attr('title');
+	
     console.log(title);
     $('.title').html(title);
     $.ajax({
@@ -164,7 +164,19 @@
       cache: true,
       success: function (data) {
           console.log(data);
-          var ctx = document.getElementById("chart-0").getContext("2d");
+          chart(data);
+      },
+      error: function(err) {
+          console.log(err);
+      }
+    });  
+    
+  });
+
+function chart(data){
+	$('#chart-0').remove(); // this is my <canvas> element
+  	$('#graph-container').append('<canvas id="chart-0"><canvas>');
+	var ctx = document.getElementById("chart-0").getContext("2d");
           window.myPie = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -182,16 +194,17 @@
               labels: data.tahun
             },
             options: {
-              responsive: true
+				responsive: true,
+				scales: {
+					yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+					}]
+				}
             }
           });
-      },
-      error: function(err) {
-          console.log(err);
-      }
-    });  
-    
-  });
+}
 
 </script>
 @endpush
