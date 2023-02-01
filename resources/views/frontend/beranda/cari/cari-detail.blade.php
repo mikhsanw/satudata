@@ -37,7 +37,7 @@
         </form>
         <br>
         <h2>{{$datas->opd->nama}}</h2>
-        <h5>{{$datas->nama}}</h5>
+        <h5>{!!$nama!!}</h5>
       </div>
 
       <div class="row pb-5">
@@ -53,7 +53,7 @@
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Satuan</td>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Produsen Data</td>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Ketersediaan Data</td>
-              <td colspan="{{count($tahuns)}}" style="vertical-align : middle;text-align:center;">Tahun Produksi</td>
+              <td colspan="{{count($tahuns)}}" style="vertical-align : middle;text-align:center;">Tahun</td>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Catatan</td>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Grafik</td>
             </tr>

@@ -23,7 +23,7 @@ class frontendController extends Controller
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
             'opd' => Opd::get(),
-            'buku' => Dokumen::get(),
+            'buku' => Dokumen::latest()->get(),
         );
         return view('frontend.beranda.index',$data);
     }
@@ -124,10 +124,15 @@ class frontendController extends Controller
     public function caridetail($id){
         $elemen = Elemen::find($id);
 
+        $nama = '<i>'.$elemen->nama.'</i>';
+        if($elemen->parent){
+            $nama = $elemen->getParentNamaFront($nama,$elemen->parent->id);
+        }
         $data = [
             'datas'=> $elemen,
             'tahuns' => config('master.tahunlaporan'),
-            'elemen' => new Elemen
+            'elemen' => new Elemen,
+            'nama' => $nama,
         ];
         return view('frontend.beranda.cari.cari-detail', $data);
     }

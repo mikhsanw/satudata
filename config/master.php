@@ -83,11 +83,9 @@ return [
         '2'           => 'Desa',
     ],
     'tahunlaporan'=>[
-        '0' => date("Y")-5,
-        '1' => date("Y")-4,
-        '2' => date("Y")-3,
-        '3' => date("Y")-2,
-        '4' => date("Y")-1
+        '0' => date("Y")-3,
+        '1' => date("Y")-2,
+        '2' => date("Y")-1
     ]
     
 ];

@@ -45,7 +45,7 @@
         <ul>
           @foreach($elemen as $data)
           <li>
-            <a href="{{url('caridetail/'.$data->id)}}#cari" style="color:red;">
+            <a href="{{url('caridetail/'.$data->id)}}#cari" class="text-primary">
               {{$data->nama}}
             </a>
           </li>
@@ -57,7 +57,7 @@
         <ul>
           @foreach($subelemen as $data)
           <li>
-            <a href="{{url('caridetail/'.$data->id)}}#detail" style="color:red;">
+            <a href="{{url('caridetail/'.$data->id)}}#cari" class="text-primary">
               {{$data->nama}}
             </a>
           </li>
