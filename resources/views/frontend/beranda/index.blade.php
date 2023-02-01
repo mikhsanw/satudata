@@ -41,7 +41,7 @@
 
       <div class="section-title">
         <h2>SATU DATA KABUPATEN BENGKALIS</h2>
-        <p>Merupakan Aplikasi Resmi Yang Menyediakan Data-Data Dari Perangkat Daerah Dilingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.</p>
+        <p>Merupakan aplikasi resmi yang menyediakan data dari Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya di Kabupaten Bengkalis yang akurat dan akuntabel, serta memberikan kemudahan dan kebutuhan akses data untuk masyarakat dan instansi pemerintahan dengan berkualitas dan terbuka.</p>
       </div>
 
       <div class="row">
@@ -190,17 +190,13 @@
         <div class="col-lg-6">
           <div class="resume-item pb-0">
             <h4>Data Statistik Dasar</h4>
-            <p><em>Statistik yang pemanfaatannya ditujukan untuk keperluan yang bersifat luas, baik pemerintah maupun masyarakat, yang memiliki ciri-ciri lintas sektoral, berskala nasional maupun regional, makro, dan yang penyelenggaraannya menjadi tanggung jawab BPS.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Data Statistik Sektoral</h4>
-            <p><em>Statistik yang pemanfaatannya ditujukan untuk memenuhi kebutuhan instansi pemerintah tertentu dalam rangka penyelenggaraan tugas-tugas pemerintah dan tugas pembangunan yag merupakan tugas pokok instansi pemerintah yang bersangkutan.</em></p>
+            <p><em>Data berupa angka tentang karakteristik atau ciri khusus suatu populasi yang diperoleh dengan cara pengumpulan, pengolahan, penyajian dan analisis.</em></p>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="resume-item">
-            <h4>Data Potensi Desa</h4>
-            <p><em>potensi desa adalah kemampuan, kekuatan atau sumber daya (fisik dan non fisik) yang dimiliki oleh suatu daerah namun belum sepenuhnya terlihat atau dipergunakan secara maksimal</em></p>
+            <h4>Data Geospasial</h4>
+            <p><em>Data tentang lokasi geografis, dimensi atau ukuran, dan/atau karakteristik objek alam dan/atau buatan manusia yang berada di bawah, pada atau di atas permukaan bumi.</em></p>
           </div>
         </div>
       </div>
@@ -214,7 +210,7 @@
 
       <div class="section-title">
         <h2>DATA STATISTIK SEKTORAL</h2>
-        <p>Data Kategori Dilingkungan Pemerintah Kabupaten Bengkalis</p>
+        <p>Data Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya</p>
       </div>
 
       <div class="row">
@@ -246,7 +242,7 @@
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-      @foreach($buku as $data)
+      @foreach(array_reverse($buku) as $data)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           
           <div class="portfolio-wrap">
