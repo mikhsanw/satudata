@@ -1,7 +1,7 @@
 @extends('frontend.partials.app')
 @section('content')
 <!-- ======= Hero Section ======= -->
-<div class="overlay-logo">
+<div class="overlay-logo" style="width:50px; height:100px">
   <img id="logo-mobile" src="{{asset('images/satu-data.png')}}" alt="image">
 </div>
 <section id="hero" class="d-flex flex-column justify-content-center">
