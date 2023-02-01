@@ -124,10 +124,15 @@ class frontendController extends Controller
     public function caridetail($id){
         $elemen = Elemen::find($id);
 
+        $nama = '<i>'.$elemen->nama.'</i>';
+        if($elemen->parent){
+            $nama = $elemen->getParentNamaFront($nama,$elemen->parent->id);
+        }
         $data = [
             'datas'=> $elemen,
             'tahuns' => config('master.tahunlaporan'),
-            'elemen' => new Elemen
+            'elemen' => new Elemen,
+            'nama' => $nama,
         ];
         return view('frontend.beranda.cari.cari-detail', $data);
     }
