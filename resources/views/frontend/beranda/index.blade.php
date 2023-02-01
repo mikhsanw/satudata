@@ -1,9 +1,15 @@
 @extends('frontend.partials.app')
 @section('content')
 <!-- ======= Hero Section ======= -->
+<div class="overlay-logo">
+  <img id="logo-mobile" src="{{asset('images/satu-data.png')}}" alt="image">
+</div>
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    <img src="{{asset('images/satu-data.png')}}" height="200" width="400" alt="image">
+    <div class="sys-logo">
+      <img id="img-desktop" src="{{asset('images/satu-data.png')}}" alt="image">
+      <img id="img-mobile" src="{{asset('images/Kabupaten Bengkalis Bermasa.png')}}" alt="image">
+    </div>
     <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
     <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#cari')}}">
 			<div class="row m-0">
