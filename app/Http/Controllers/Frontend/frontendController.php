@@ -23,7 +23,7 @@ class frontendController extends Controller
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
             'opd' => Opd::get(),
-            'buku' => Dokumen::get(),
+            'buku' => Dokumen::latest(),
         );
         return view('frontend.beranda.index',$data);
     }

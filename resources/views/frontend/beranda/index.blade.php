@@ -242,7 +242,7 @@
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-      @foreach(array_reverse($buku) as $data)
+      @foreach($buku as $data)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           
           <div class="portfolio-wrap">
