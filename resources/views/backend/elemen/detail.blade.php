@@ -1,6 +1,6 @@
 @extends('backend.home.index')
 @push('title',ucwords(strtolower($halaman->nama)))
-@push('header',ucwords(strtolower($halaman->nama)))
+@push('header',ucwords(strtolower($halaman->nama)).ucwords(strtolower('<span class="fw-300"><i>'.$nama.'</i></span>')))
 @push('tombol')
 <a href="#tambah" class="btn btn-sm btn-primary tambah-profil">
 	Tambah  <i class="fa fa-plus-circle"></i>

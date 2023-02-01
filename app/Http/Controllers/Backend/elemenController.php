@@ -21,13 +21,6 @@ class elemenController extends Controller
     {
         return view('backend.'.$this->kode.'.index');
     }
-    public function detaildataindex($id)
-    {
-        $data=[
-            'id'=>$id
-        ];
-        return view('backend.'.$this->kode.'.detail-data',$data);
-    }
 
     public function data(Request $request, $id=NULL)
     {
@@ -182,8 +175,15 @@ class elemenController extends Controller
      */
     public function show($id)
     {
+        $elemen = $this->model::find($id);
+        $nama = '<a href="'.url($this->kode.'/'.$elemen->id).'" class="text-dark">'.$elemen->nama.'</a>';
+        if($elemen->parent){
+            $nama = $elemen->getParentNama($nama,$elemen->parent->id);
+            // dd($nama);   
+        }
         $data=[
-            'data'    => $this->model::find($id)
+            'data'    => $this->model::find($id),
+            'nama'    => $nama
         ];
         return view('backend.'.$this->kode.'.detail', $data);
     }

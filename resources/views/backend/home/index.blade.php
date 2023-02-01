@@ -106,8 +106,8 @@
                             <div id="panel-1" class="panel">
                                 <div class="panel-hdr">
                                     <h2>
-                                        <span class="fa {!! $halaman->icon ?? 'fa-home' !!}"></span> &nbsp;
-                                        @stack('header')
+                                        <span class="fa {!! $halaman->icon ?? 'fa-home' !!}"></span>
+                                        &nbsp;@stack('header')
                                     </h2>
                                     @stack('panel')
                                     <div class="panel-toolbar">

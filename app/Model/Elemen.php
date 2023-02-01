@@ -25,7 +25,7 @@ class Elemen extends Model
 
     public function parent()
     {
-        return $this->belongsTo('App\Model\Elemen', 'id','parent_id');
+        return $this->belongsTo('App\Model\Elemen','parent_id');
     }
 
     public function children()
@@ -46,5 +46,16 @@ class Elemen extends Model
     public function filterjumlah($id,$th)
     {
         return $this->join('data','data.elemen_id','elemens.id')->select('jumlah')->where('elemens.id',$id)->where('data.tahun',$th)->whereNull('data.deleted_at')->first();
+    }
+
+    public function getParentNama($nama,$id)
+    {
+        $qr = $this->find($id);
+        $namanew = '<a href="'.url('elemen/'.$qr->id).'" class="text-dark">'.\Help::shortDescription($qr->nama,3).'</a>'.' / '.$nama;
+        // dd($qr->parent->id);
+        if($qr->parent){
+            return $this->getParentNama($namanew,$qr->parent->id);
+        }
+        return $namanew;
     }
 }
