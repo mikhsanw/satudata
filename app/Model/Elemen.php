@@ -61,7 +61,7 @@ class Elemen extends Model
     public function getParentNamaFront($nama,$id)
     {
         $qr = $this->find($id);
-        $namanew = '<a href="'.url('caridetail/'.$qr->id.'#cari').'" class="text-dark">'.$qr->nama.'</a>'.' / '.$nama;
+        $namanew = '<a href="'.url('caridetail/'.$qr->id.'#cari').'" class="text-dark">'.$qr->nama.'</a>'.' <br> '.$nama;
         // dd($qr->parent->id);
         if($qr->parent){
             return $this->getParentNamaFront($namanew,$qr->parent->id);
