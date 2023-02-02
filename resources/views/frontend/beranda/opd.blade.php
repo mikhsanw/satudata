@@ -183,10 +183,8 @@ function chart(data){
               datasets: [{
                 data: data.jumlah,
                 backgroundColor: [
-                  window.chartColors.red,
-                  window.chartColors.orange,
-                  window.chartColors.yellow,
-                  window.chartColors.green,
+                  window.chartColors.blue,
+                  window.chartColors.blue,
                   window.chartColors.blue,
                 ],
                 label: data.tahun
