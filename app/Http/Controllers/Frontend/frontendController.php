@@ -22,7 +22,7 @@ class frontendController extends Controller
     {   
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
-            'opd' => Opd::get(),
+            'opd' => Opd::orderby('tingkatan','asc')->get(),
             'buku' => Dokumen::latest()->get(),
         );
         return view('frontend.beranda.index',$data);
@@ -104,7 +104,7 @@ class frontendController extends Controller
                 $tahuns[]=$i;
             }
         }
-        $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->orderby('tingkatan','asc')->get();
+        $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->get();
         $elemen = new Elemen;
         $dataOpd = Opd::findOrFail($id);
         return view('frontend.beranda.opd', compact('dataOpd','tahuns', 'elemen','datas', 'tahun5'));
