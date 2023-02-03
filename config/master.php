@@ -83,8 +83,13 @@ return [
         '2'           => 'Desa',
     ],
     'tingkatanopd'=>[
-        '0'           => 'Setda',
-        '1'           => 'Perangkat Daerah',
+        '0'           => 'Sekretariat Daerah',
+        '1'           => 'Sekretariat DPRD',
+        '2'           => 'Inspektorat',
+        '3'           => 'Perangkat Badan',
+        '4'           => 'Perangkat Dinas',
+        '5'           => 'RSUD',
+        '6'           => 'Perangkat Vertical',
     ],
     'tahunlaporan'=>[
         '0' => date("Y")-3,
