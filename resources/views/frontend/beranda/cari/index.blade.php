@@ -31,7 +31,7 @@
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Cari</button>
+              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Pencarian</button>
             </div>
           </div>
         </form>

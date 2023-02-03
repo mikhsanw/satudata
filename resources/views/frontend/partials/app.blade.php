@@ -62,6 +62,7 @@
 
 <!-- Template Main JS File -->
 <script src="{{asset('MyResume/assets/js/main.js')}}"></script>
+<script src="{{asset('MyResume/assets/js/pagination.js')}}"></script>
 @stack('js')
 </body>
 </html>

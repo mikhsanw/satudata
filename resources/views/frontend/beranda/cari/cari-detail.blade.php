@@ -31,7 +31,7 @@
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-12">
-              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Cari</button>
+              <button type="submit" class="btn btn-primary"><i class="bx bx-search"></i> Pencarian</button>
             </div>
           </div>
         </form>
@@ -42,11 +42,11 @@
 
       <div class="row pb-5">
         <div class="col-lg-12 pt-4 pt-lg-0 pb-2 text-right">
-          <a href="{{url('/export/'.$datas->id)}}" class="btn btn-info">Export to excel</a>
+          <a href="{{url('/export/'.$datas->id)}}" class="btn btn-primary">Export to excel</a>
         </div>
         <div class="col-lg-12 pt-4 pt-lg-0 pb-2">
-        <table id="datatable" class="table table-bordered table-hover table-striped table-responsive">
-          <thead class="bg-primary-600">
+        <table id="datatable" class="table table-bordered table-hover table-striped table-responsive" style=" display: block; overflow-x: auto;">
+            <thead class="bg-primary-600" style="background-color: #0a58ca; color: white;">
             <tr>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">No</td>
               <td rowspan="2" style="vertical-align : middle;text-align:center;">Elemen / Sub Elemen</td>

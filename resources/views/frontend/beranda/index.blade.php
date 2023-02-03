@@ -13,7 +13,7 @@
     <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
     <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#cari')}}">
 			<div class="row m-0">
-				<div class="col-lg-5 col-md-7 col-sm-12 p-0">
+				<div class="col-lg-4 col-md-7 col-sm-12 p-0">
 				  <div class="form-group">
 				  <i class="ti-search"></i>
 				    <input name="keyword" type="text" class="form-control b-r" placeholder="Pencarian Data ...">
@@ -218,6 +218,8 @@
           @foreach ($opd as $data)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue card-opd mb-5">
+              <ul id="pagination-demo"
+              class="pagination-sm"></ul>
               <div class="icon">
                   {{-- <i class="bx bx-file"></i> --}}
                   <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
