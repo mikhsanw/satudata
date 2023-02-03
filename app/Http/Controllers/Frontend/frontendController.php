@@ -104,7 +104,7 @@ class frontendController extends Controller
                 $tahuns[]=$i;
             }
         }
-        $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->get();
+        $datas = Elemen::whereOpdId($id)->whereNull('parent_id')->orderby('tingkatan','asc')->get();
         $elemen = new Elemen;
         $dataOpd = Opd::findOrFail($id);
         return view('frontend.beranda.opd', compact('dataOpd','tahuns', 'elemen','datas', 'tahun5'));
