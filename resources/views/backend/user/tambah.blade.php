@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-12 form-group">
         <div class="form-group">
-            {!! Form::label('Nama', 'Siapa Namanya ?', array('class' => 'control-label')) !!}
+            {!! Form::label('Nama', 'Nama Instansi', array('class' => 'control-label')) !!}
             {!! Form::text('nama', NULL, array('id' => 'nama', 'class' => 'form-control', 'placeholder' => 'Nama')) !!}
         </div>
         <div class="form-group">
@@ -32,7 +32,7 @@
     </div>
     <div class="col-md-4">
         <div class="form-group">
-            {!! Form::label('opd', 'Opd', array('class' => 'control-label')) !!}
+            {!! Form::label('opd', 'Pilih Instansi', array('class' => 'control-label')) !!}
             {!! Form::select('opd_id', $opd, null, array('id' => 'opd_id', 'class' => 'form-control')) !!}
         </div>
     </div>

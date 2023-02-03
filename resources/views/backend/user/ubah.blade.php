@@ -1,7 +1,7 @@
 {!! Form::open(array('id' => 'frmOji', 'route' => [$halaman->kode.'.update', $user->id], 'class' => 'form account-form', 'method' => 'PUT')) !!}
 <div class="row">
     <div class="col-md-12 form-group">
-        {!! Form::label('Nama', 'Namanya siapa ?', array('class' => 'col-md-6 control-label')) !!}
+        {!! Form::label('Nama', 'Nama Instansi', array('class' => 'col-md-6 control-label')) !!}
         {!! Form::text('nama', $user->nama, array('id' => 'nama', 'class' => 'form-control', 'placeholder' =>
         'Nama')) !!}
     </div>
@@ -31,7 +31,7 @@
         'form-control')) !!}
     </div>
     <div class="form-group col-md-6">
-        {!! Form::label('opd', 'opd', array('class' => 'col-md-6 control-label')) !!}
+        {!! Form::label('opd', 'Pilih Instansi', array('class' => 'col-md-6 control-label')) !!}
         {!! Form::select('opd_id', $opd, $user->opd->id??null, array('id' => 'opd_id', 'class' =>
         'form-control')) !!}
     </div>

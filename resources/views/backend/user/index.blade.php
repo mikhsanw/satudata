@@ -12,8 +12,8 @@
 		<table id="datatable" class="table table-bordered table-hover table-striped w-100">
 			<thead class="bg-primary-600">
 				<tr>
-					<th class="text-center">NIP</th>
-					<th >Nama</th>
+					<th class="text-center">Singkatan</th>
+					<th >Nama Instansi</th>
 					<th >E-Mail</th>
 					<th class="text-center">Akses Grup</th>
 					<th class="text-center">Level</th>
