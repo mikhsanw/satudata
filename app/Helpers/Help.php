@@ -95,7 +95,7 @@ class Help extends Fungsi
     }
 
     public static function desimal($num){
-		$data = strchr(str_replace(",",".",$num),".")==''? number_format($num, 0,',','.') : number_format($num, 2,',','.');
+		$data = strchr(str_replace(",",".",$num),".")==''? number_format(floatval($num), 0,',','.') : number_format(floatval($num), 2,',','.');
 		return $data;
 	}
 }
