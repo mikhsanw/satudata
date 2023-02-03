@@ -6,7 +6,7 @@
     <td>{{($data->opd->nama??'')}}</td>
     <td style="text-align: center;">{{(count($item->data)>0)?'Ada':''}}</td>
     @foreach($tahun as $th)
-        <td style="text-align: center;">{{$elemen->filterjumlah($item->id??'',$th)->jumlah??''}}</td>
+        <td style="text-align: center;">{{($elemen->filterjumlah($item->id??'',$th))?(Help::desimal($elemen->filterjumlah($item->id??'',$th)->jumlah)):''}}</td>
     @endforeach
     <td>{{$item->keterangan??''}}</td>
     <td>
