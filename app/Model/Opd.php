@@ -15,7 +15,7 @@ class Opd extends Model
         'id'=>'string',
     ];
     protected $fillable=[
-        'id', 'nama', 'singkatan'
+        'id', 'nama', 'singkatan','tingkatan'
     ];
     public function file()
     {
