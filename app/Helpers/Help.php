@@ -93,4 +93,9 @@ class Help extends Fungsi
      
         return trim(trim($string, $separator)); 
     }
+
+    public static function desimal($num){
+		$data = strchr(str_replace(",",".",$num),".")==''? number_format($num, 0,',','.') : number_format($num, 2,',','.');
+		return $data;
+	}
 }

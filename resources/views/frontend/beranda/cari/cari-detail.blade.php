@@ -71,7 +71,7 @@
                 <td>{{($datas->opd->nama??'')}}</td>
                 <td>{{(count($datas->data)>0)?'Ada':''}}</td>
                 @foreach($tahun as $th)
-                  <td>{{$elemen->filterjumlah($datas->id??'',$th)->jumlah??''}}</td>
+                  <td>{{($elemen->filterjumlah($datas->id??'',$th))?(Help::desimal($elemen->filterjumlah($datas->id??'',$th)->jumlah)):''}}</td>
                 @endforeach
                 <td>{{$datas->keterangan??''}}</td>
                 <td>

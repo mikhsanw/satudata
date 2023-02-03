@@ -6,8 +6,12 @@
             {!! Form::text('nama', null, array('id' => 'nama', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
-            {!! Form::label('singkatan', 'Masukkan singkatan', array('class' => 'control-label')) !!}
+            {!! Form::label('singkatan', 'Masukkan Singkatan', array('class' => 'control-label')) !!}
             {!! Form::text('singkatan', null, array('id' => 'singkatan', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+        </p>
+        <p>
+            {!! Form::label('tingkatan', 'Masukkan Tingkatan', array('class' => 'control-label')) !!}
+            {!! Form::select('tingkatan', config('master.tingkatanopd'), null, array('id' => 'tingkatan', 'class' => 'form-control select2', 'autocomplete' => 'off')) !!}
         </p>
         <p>
             {!! Form::label('file_foto', 'Upload Gambar', array('class' => 'control-label')) !!}

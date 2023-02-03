@@ -82,6 +82,10 @@ return [
         '1'           => 'Kecamatan',
         '2'           => 'Desa',
     ],
+    'tingkatanopd'=>[
+        '0'           => 'Setda',
+        '1'           => 'Perangkat Daerah',
+    ],
     'tahunlaporan'=>[
         '0' => date("Y")-3,
         '1' => date("Y")-2,
