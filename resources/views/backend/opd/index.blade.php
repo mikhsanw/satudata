@@ -15,6 +15,7 @@
 					<th class="width-1">No</th>
 					<th class="text-center">Nama Instansi</th>
 					<th class="text-center">Singkatan</th>
+					<th class="text-center">Alamat</th>
 					<th class="text-center">Logo</th>
 					<th width="50px" class="text-center" tabindex="0" rowspan="1" colspan="1">Aksi</th>
 				</tr>

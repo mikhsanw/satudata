@@ -225,7 +225,8 @@
                   <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
                 </div>
               <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
-              <p>LIHAT DATA</p>
+            <i class="bi bi-maps"></i>
+            <p>Jl. Antara, Telp. 0766-21080</p>
             </div>
           </div>
           @endforeach
@@ -404,7 +405,7 @@
 @push('css')
   <style>
     .card-opd{
-      width: 325px;
+      width: 350px;
     }
 
     @media screen and (max-width: 430px){

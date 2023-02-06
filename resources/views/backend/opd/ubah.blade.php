@@ -10,6 +10,10 @@
             {!! Form::text('singkatan', $data->singkatan, array('id' => 'singkatan', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
+            {!! Form::label('alamat', 'Masukkan Alamat', array('class' => 'control-label')) !!}
+            {!! Form::select('alamat', config('master.alamat'), $data->alamat, array('id' => 'alamat', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+        </p>
+        <p>
             {!! Form::label('tingkatan', 'Masukkan Tingkatan', array('class' => 'control-label')) !!}
             {!! Form::select('tingkatan', config('master.tingkatanopd'), $data->tingkatan, array('id' => 'tingkatan', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
