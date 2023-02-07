@@ -57,6 +57,7 @@
                   <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
                 </div>
               <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
+              <a href="{{route('opdDetail', $data->id)}}#detail"><button class="buttonlihat button4">Lihat Data</button></a>
               <p><i class="bx bx-map"></i> {{$data->alamat}}</p>
             </div>
           </div>
