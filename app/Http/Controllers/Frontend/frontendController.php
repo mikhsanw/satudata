@@ -23,9 +23,10 @@ class frontendController extends Controller
     {   
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
+            'opdall' => Opd::orderby('tingkatan','asc')->get(),
             'data' => Elemen::where('status','1')->get(),
             'elemen' => Elemen::whereNull('parent_id')->get(),
-            'opd' => Opd::orderby('tingkatan','asc')->get(),
+            'opd' => Opd::orderby('tingkatan','asc')->paginate(6),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::latest()->get(),
         );
@@ -98,6 +99,11 @@ class frontendController extends Controller
         //
     }
 
+    public function opdAll(){
+        $opd = Opd::all();
+        return view('frontend.beranda.opdall', compact('opd'));
+    }
+
     public function opdDetail($id){
         $tahun5 = config('master.tahunlaporan');
 
@@ -145,6 +151,7 @@ class frontendController extends Controller
     {
         return Excel::download(new PencarianExport($id), $id.'.xlsx');
     }
+
     public function chart($id) 
     {
         

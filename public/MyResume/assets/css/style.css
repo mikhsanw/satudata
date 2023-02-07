@@ -1001,6 +1001,39 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Tombol Selengkapnya
+--------------------------------------------------------------*/
+.buttonselengkapnya {
+  background-color: #0563bb;
+  border: none;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.buttonlihat {
+  background-color: #177804e2;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button4 {border-radius: 12px;}
+
+/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials .section-header {

@@ -74,7 +74,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
+            <i class="bi bi-clipboard-data"></i>
             <span data-purecounter-start="0" data-purecounter-end="{{$data->count()}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Semua Data</p>
           </div>
@@ -82,7 +82,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
           <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
+            <i class="bi bi-journal-text"></i>
             <span data-purecounter-start="0" data-purecounter-end="{{$elemen->count()}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Data Elemen</p>
           </div>
@@ -90,22 +90,21 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
-            <i class="bi bi-headset"></i>
+            <i class="bi bi-building"></i>
             <span data-purecounter-start="0" data-purecounter-end="{{$opd->count()}}" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Data SKPD</p>
+            <p>Data Instansi/SKPD</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
-            <i class="bi bi-award"></i>
+            <i class="bi bi-ui-checks"></i>
             <span data-purecounter-start="0" data-purecounter-end="{{$wilayah->count()}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Semua Kecamatan</p>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
   <!-- End Facts Section -->
@@ -225,12 +224,19 @@
                   <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
                 </div>
               <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
+              <a href="{{route('opdDetail', $data->id)}}#detail"><button class="buttonlihat button4">Lihat Data</button></a>
               <p><i class="bx bx-map"></i> {{$data->alamat}}</p>
             </div>
           </div>
           @endforeach
         {{-- @endfor --}}
       </div>
+
+      <div class="col-lg-12 col-md-12">
+				<div class="text-center">
+					<a href="opdAll"><button class="buttonselengkapnya button4">Selengkapnya <i class="bi bi-arrow-right-circle"></i></button></a>
+				</div>
+			</div>
 
     </div>
   </section>
