@@ -23,10 +23,10 @@ class frontendController extends Controller
     {   
         $data = array(
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
-            'opdall' => Opd::orderby('tingkatan','asc')->get(),
             'data' => Elemen::where('status','1')->get(),
             'elemen' => Elemen::whereNull('parent_id')->get(),
             'opd' => Opd::orderby('tingkatan','asc')->paginate(6),
+            'opdall' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::latest()->get(),
         );

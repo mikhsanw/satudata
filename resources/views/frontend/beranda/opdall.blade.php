@@ -42,7 +42,7 @@
 
         <div class="section-title">
         <h2>SEMUA DATA STATISTIK SEKTORAL</h2>
-        <p>Data Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya</p>
+        <marquee width="600" height="40"><p>Data Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya</p></marquee>
         <br>
 
         <div class="row">

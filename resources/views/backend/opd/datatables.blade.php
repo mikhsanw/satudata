@@ -13,6 +13,7 @@ $(document).ready(function() {
                 { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
 				{ data: 'nama' },
 				{ data: 'singkatan' },
+				{ data: 'tingkatan' },
 				{ data: 'alamat' },
 				{ data: 'gambar' },
 				{ data: 'action', orderable: false, searchable: false}
