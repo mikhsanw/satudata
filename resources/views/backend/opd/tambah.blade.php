@@ -11,7 +11,7 @@
         </p>
         <p>
             {!! Form::label('alamat', 'Masukkan Alamat', array('class' => 'control-label')) !!}
-            {!! Form::select('alamat', null, array('id' => 'alamat', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
+            {!! Form::text('alamat', null, array('id' => 'alamat', 'class' => 'form-control', 'autocomplete' => 'off')) !!}
         </p>
         <p>
             {!! Form::label('tingkatan', 'Masukkan Tingkatan', array('class' => 'control-label')) !!}
