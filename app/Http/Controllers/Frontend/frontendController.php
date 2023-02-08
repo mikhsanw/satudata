@@ -26,7 +26,6 @@ class frontendController extends Controller
             'data' => Elemen::where('status','1')->get(),
             'elemen' => Elemen::whereNull('parent_id')->get(),
             'opd' => Opd::orderby('tingkatan','asc')->paginate(6),
-            'opdall' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::latest()->get(),
         );
@@ -100,7 +99,7 @@ class frontendController extends Controller
     }
 
     public function opdAll(){
-        $opd = Opd::all();
+        $opd = Opd::orderby('tingkatan','asc')->get();
         return view('frontend.beranda.opdall', compact('opd'));
     }
 

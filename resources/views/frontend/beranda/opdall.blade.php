@@ -47,7 +47,7 @@
 
         <div class="row">
         {{-- @for ($i=1; $i<10; $i++) --}}
-          @foreach ($opdall as $data)
+          @foreach ($opd as $data)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue card-opd mb-5">
               <ul id="pagination-demo"
