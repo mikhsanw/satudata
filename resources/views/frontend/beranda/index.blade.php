@@ -227,7 +227,7 @@
             </div>
           </div>
           @if($key==5)
-          @php exit; @endphp
+          @php break; @endphp
           @endif
           @endforeach
       </div>
