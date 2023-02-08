@@ -125,5 +125,12 @@ Route::group(['prefix' => config('master.url.admin')], function () {
             Route::get('/hapus/{id}', 'dokumenController@hapus');
         });
         Route::resource('dokumen', 'dokumenController');
+        
+        // monografi
+        Route::prefix('monografi')->as('monografi')->group(function () {
+            Route::get('/data', 'monografiController@data');
+            Route::get('/hapus/{id}', 'monografiController@hapus');
+        });
+        Route::resource('monografi', 'monografiController');
     });
 });
