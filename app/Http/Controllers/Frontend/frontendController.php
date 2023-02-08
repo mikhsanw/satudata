@@ -25,7 +25,7 @@ class frontendController extends Controller
             'slider' => foto::where('status',config('master.status_foto.slider'))->orderBy('id','desc')->take(5)->get(),
             'data' => Elemen::where('status','1')->get(),
             'elemen' => Elemen::whereNull('parent_id')->get(),
-            'opd' => Opd::orderby('tingkatan','asc')->paginate(6),
+            'opd' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::latest()->get(),
         );

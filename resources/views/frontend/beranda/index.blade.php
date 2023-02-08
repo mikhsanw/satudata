@@ -213,14 +213,12 @@
       </div>
 
       <div class="row">
-        {{-- @for ($i=1; $i<10; $i++) --}}
-          @foreach ($opd as $data)
+          @foreach ($opd as $key => $data)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue card-opd mb-5">
               <ul id="pagination-demo"
               class="pagination-sm"></ul>
               <div class="icon">
-                  {{-- <i class="bx bx-file"></i> --}}
                   <img src="{{$data->file->url_stream ?? ''}}" alt="" style="width: 80px;">
                 </div>
               <h4><a href="{{route('opdDetail', $data->id)}}#detail">{{$data->nama}}</a></h4>
@@ -228,8 +226,10 @@
               <p><i class="bx bx-map"></i> {{$data->alamat}}</p>
             </div>
           </div>
+          @if($key==5)
+          @php exit; @endphp
+          @endif
           @endforeach
-        {{-- @endfor --}}
       </div>
 
       <div class="col-lg-12 col-md-12">
