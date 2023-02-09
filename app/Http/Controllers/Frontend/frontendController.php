@@ -28,6 +28,7 @@ class frontendController extends Controller
             'opd' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::latest()->get(),
+            'monografi' => Dokumen::whereStatus(config('master.status_dokumen.monografi'))->latest()->get(),
         );
         return view('frontend.beranda.index',$data);
     }

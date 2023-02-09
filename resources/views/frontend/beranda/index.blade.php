@@ -270,6 +270,33 @@
       @endforeach
       </div>
 
+      <div class="section-title">
+        <h2>MONOGRAFI</h2>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      @foreach($monografi as $data)
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          
+          <div class="portfolio-wrap">
+            <img src="{{$data->file ? $data->file->getFileName($data->id,'gambar')->url_stream : ''}}" width="100%" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{$data->nama}}</h4>
+              <div class="portfolio-links">
+              <a href="{{$data->file ? url($data->file->getFileName($data->id,'buku')->url_stream) : ''}}" target="blank_">
+                <i class="bx bx-download"></i>
+              </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      @endforeach
+      </div>
+
+    </div>
+
+
     </div>
   </section>
   <!-- End Portfolio Section -->
