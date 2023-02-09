@@ -276,7 +276,7 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
       @foreach($monografi as $data)
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
           
           <div class="portfolio-wrap">
             <img src="{{$data->file ? $data->file->getFileName($data->id,'gambar')->url_stream : ''}}" width="100%" class="img-fluid" alt="">
