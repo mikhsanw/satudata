@@ -27,7 +27,7 @@ class frontendController extends Controller
             'elemen' => Elemen::whereNull('parent_id')->get(),
             'opd' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
-            'buku' => Dokumen::latest()->get(),
+            'buku' => Dokumen::whereStatus(config('master.status_dokumen.buku'))->latest()->get(),
             'monografi' => Dokumen::whereStatus(config('master.status_dokumen.monografi'))->latest()->get(),
         );
         return view('frontend.beranda.index',$data);
