@@ -40,7 +40,9 @@ $(document).ready(function(){
 						$('#'+i).closest('.form-group').addClass('has-error').shake();
 						$('#'+i).focus();
 						$(".pesan").html('<div class="alert alert-danger" role="alert"><i class="fa fa-ban"></i> '+ item +'</div>');
-						return false;
+						setTimeout(function() {
+							$(".pesan,.fa-sign-in").hide();
+						},5000);
 					});
 				}
 				$(".goLogin").val('Log In');
