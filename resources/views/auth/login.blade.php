@@ -41,6 +41,9 @@
                     {{ __('Ingatkan Saya') }}
                 </div>
             </div>
+            <div class="margin-top-30 text-center">
+                <span class='pesan'></span>
+            </div>
             <button type="button" class="btn btn-default float-right goLogin">{{ __('Login') }}</button>
         </form>
     </div>
