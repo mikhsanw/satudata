@@ -40,7 +40,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>SATU DATA KABUPATEN BENGKALIS Kita</h2>
+        <h2>SATU DATA KABUPATEN BENGKALIS</h2>
         <p>Merupakan aplikasi resmi yang menyediakan data dari Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya di Kabupaten Bengkalis yang akurat dan akuntabel, serta memberikan kemudahan dan kebutuhan akses data untuk masyarakat dan instansi pemerintahan dengan berkualitas dan terbuka.</p>
       </div>
 
