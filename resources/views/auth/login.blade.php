@@ -41,8 +41,8 @@
                     {{ __('Ingatkan Saya') }}
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-md-6"> {!! htmlFormSnippet() !!} </div>
+            <div class="form-group">
+                <div class=""> {!! htmlFormSnippet() !!} </div>
             </div>
             <div class="margin-top-30 text-center">
                 <span class='pesan'></span>
