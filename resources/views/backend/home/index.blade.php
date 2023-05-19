@@ -24,7 +24,6 @@
         <link id="mytheme" rel="stylesheet" media="screen, print" href="{{asset('backend/css/themes/cust-theme-'.config('master.aplikasi.tema').'.css')}}">
     @endif
     <link id="myskin" rel="stylesheet" media="screen, print" href="{{asset('backend/css/skin/skin-master.css')}}">
-    {!! ReCaptcha::htmlScriptTagJsApi() !!}
     @stack('css')
 {{--    <script>--}}
 {{--        window.OneSignal = window.OneSignal || [];--}}

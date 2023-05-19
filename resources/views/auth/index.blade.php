@@ -25,6 +25,7 @@
         @if (config('master.aplikasi.tema') != NULL)
             <link id="mytheme" rel="stylesheet" href="{{ asset('backend/css/themes/cust-theme-' . config('master.aplikasi.tema') .'.css') }}">
         @endif
+        {!! ReCaptcha::htmlScriptTagJsApi() !!}
     </head>
     <body>
         @yield('content')
