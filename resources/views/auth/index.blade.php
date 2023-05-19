@@ -25,32 +25,7 @@
         @if (config('master.aplikasi.tema') != NULL)
             <link id="mytheme" rel="stylesheet" href="{{ asset('backend/css/themes/cust-theme-' . config('master.aplikasi.tema') .'.css') }}">
         @endif
-        <script type="text/javascript">
-   function callbackThen(response) {
-
-     // read Promise object
-     response.json().then(function(data) {
-       console.log(data);
-       if(!data.success && data.score >= 0.6) {
-          console.log('valid recaptcha');
-       } else {
-          document.getElementById('contactForm').addEventListener('submit', function(event) {
-             event.preventDefault();
-             alert('recaptcha error');
-          });
-       }
-     });
-   }
-
-   function callbackCatch(error){
-      console.error('Error:', error)
-   }
-   </script>
-
-   {!! htmlScriptTagJsApi([
-      'callback_then' => 'callbackThen',
-      'callback_catch' => 'callbackCatch',
-   ]) !!}
+        {!! ReCaptcha::htmlScriptTagJsApi() !!}
     </head>
     <body>
         @yield('content')
