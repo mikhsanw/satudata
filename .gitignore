@@ -3,7 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor
-!vendor/laravel/ui/auth-backend/AuthenticatesUsers.php
 /public
 .idea
 /tests
@@ -14,3 +13,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+!vendor/laravel/ui/auth-backend/AuthenticatesUsers.php
