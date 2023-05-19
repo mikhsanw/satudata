@@ -10,8 +10,9 @@ $(document).ready(function(){
 		$('.form-group').removeClass('has-error');
 		var password = $("#password").val();
 		var username = $("#username").val();
+		var capca = $("#g-recaptcha-response").val();
 		var _token = $("[name='_token']").val();
-		var dataString = { 'username': username.replace(/\s/g, ''), 'password': $.base64.encode(password), '_token': _token};
+		var dataString = { 'username': username.replace(/\s/g, ''), 'password': $.base64.encode(password), '_token': _token, 'g-recaptcha-response':capca};
 		$.ajax({
 			type: "POST",
 			url: "{{ url('pengguna/masuk') }}",

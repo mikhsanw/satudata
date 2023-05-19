@@ -10,7 +10,7 @@
             <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
         </a>
     </div>
-    <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
+    <div class="card p-2 pt-4 pb-4 border-top-left-radius-0 border-top-right-radius-0">
         <form method="POST" action="{{ route('login') }}"  id="contactForm">
             @csrf
             <div class="form-group">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="form-group">
-            <div class="g-recaptcha" data-sitekey="6LdwAh8mAAAAAIBpXIn4aG9V__eK8KXcM8z8QhNF"></div>
+            {!! htmlFormSnippet() !!}
             </div>
             <div class="margin-top-30 text-center">
                 <span class='pesan'></span>
