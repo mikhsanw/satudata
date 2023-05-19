@@ -25,7 +25,7 @@
         @if (config('master.aplikasi.tema') != NULL)
             <link id="mytheme" rel="stylesheet" href="{{ asset('backend/css/themes/cust-theme-' . config('master.aplikasi.tema') .'.css') }}">
         @endif
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         @yield('content')
