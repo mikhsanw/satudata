@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class=""> {!! htmlFormSnippet() !!} </div>
+                <div class=""> <div class="g-recaptcha" data-sitekey="6LdwAh8mAAAAAIBpXIn4aG9V__eK8KXcM8z8QhNF"></div> </div>
             </div>
             <div class="margin-top-30 text-center">
                 <span class='pesan'></span>
