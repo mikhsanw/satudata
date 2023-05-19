@@ -11,7 +11,7 @@
         </a>
     </div>
     <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
-        <form method="POST" action="{{ route('login') }}"  id="contactForm">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
                 <label class="form-label" for="username">Username</label>
@@ -41,7 +41,10 @@
                     {{ __('Ingatkan Saya') }}
                 </div>
             </div>
-            
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LdwAh8mAAAAAIBpXIn4aG9V__eK8KXcM8z8QhNF" data-size="normal" data-theme="light" id="recaptcha-element"></div>
+
+            </div>
             <div class="margin-top-30 text-center">
                 <span class='pesan'></span>
             </div>
