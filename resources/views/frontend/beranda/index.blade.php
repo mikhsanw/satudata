@@ -328,7 +328,7 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="{{asset('images/wabup.jpg')}}" class="testimonial-img" alt="">
-              <h3>H. Bagus Santoso, MP</h3>
+              <h3>Dr. H. Bagus Santoso, MP</h3>
               <h4>Wakil Bupati Bengkalis</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -340,9 +340,9 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="{{asset('images/sekda.png')}}" class="testimonial-img" alt="">
-              <h3>H. Bustami HY, SH., MM</h3>
-              <h4>Sekretaris Daerah</h4>
+              <img src="{{asset('images/pltsekda.png')}}" class="testimonial-img" alt="">
+              <h3>dr. Ersan Saputra, TH</h3>
+              <h4>Plt. Sekretaris Daerah</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Semoga Dengan Aplikasi Satu Data Kabupaten Bengkalis Bisa Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Bisa Memberikan Informasi Kepada Masyarakat Banyak Demi Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
