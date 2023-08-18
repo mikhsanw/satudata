@@ -24,6 +24,8 @@
   <link href="{{asset('MyResume/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('MyResume/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.css">
   <!-- Template Main CSS File -->
   <link href="{{asset('MyResume/assets/css/style.css')}}" rel="stylesheet">
 	@stack('css')
@@ -60,6 +62,26 @@
 <script src="{{asset('MyResume/assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
 <script src="{{asset('MyResume/assets/vendor/php-email-form/validate.js')}}"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script>
+        $('.brand-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            autoplay:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    </script>
 <!-- Template Main JS File -->
 <script src="{{asset('MyResume/assets/js/main.js')}}"></script>
 <script src="{{asset('MyResume/assets/js/pagination.js')}}"></script>

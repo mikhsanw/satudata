@@ -35,6 +35,25 @@
 <!-- End Hero -->
 
 <main id="main">
+<!-- ======= Logo Slider ======= -->
+<div class="brand-carousel owl-carousel">
+        <div class="box">
+            <img src="{{asset('link/Riau.png')}}" alt="">
+        </div>
+        <div class="box">
+            <img src="{{asset('link/Bengkalis.png')}}" alt="">
+        </div>
+        <div class="box">
+            <img src="{{asset('link/BAPPENAS.png')}}" alt="">
+        </div>
+        <div class="box">
+            <img src="{{asset('link/BPS.png')}}" alt="">
+        </div>
+        <div class="box">
+            <img src="{{asset('link/SIBOS.png')}}" alt="">
+        </div>
+</div>
+<!-- ======= Logo Slider ======= -->
 <!-- ======= About Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
@@ -61,6 +80,91 @@
     </div>
   </section>
   <!-- End About Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>PEJABAT DAERAH</h2>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{{asset('images/bupati.jpg')}}" class="testimonial-img" alt="">
+              <h3>Kasmarni, S.Sos, MMP</h3>
+              <h4>Bupati Bengkalis</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Saya Yakin Dengan Adanya Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka, Untuk Mewujudkan Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{{asset('images/wabup.jpg')}}" class="testimonial-img" alt="">
+              <h3>Dr. H. Bagus Santoso, MP</h3>
+              <h4>Wakil Bupati Bengkalis</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Mudah-mudahan Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Data-Data Atau Informasi Dari Perangkat Daerah Dilingkungan Pemerintah Kabupaten Bengkalis Yang Akurat, Akuntabel dan Transparan dalam mendukung terwujudnya Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{{asset('images/pltsekda.png')}}" class="testimonial-img" alt="">
+              <h3>dr. Ersan Saputra, TH</h3>
+              <h4>Plt. Sekretaris Daerah</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Semoga Dengan Aplikasi Satu Data Kabupaten Bengkalis Bisa Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Bisa Memberikan Informasi Kepada Masyarakat Banyak Demi Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{{asset('images/kadis.jpg')}}" class="testimonial-img" alt="">
+              <h3>Hendrik Dwi Yatmoko, S.Sos, MT</h3>
+              <h4>Kepala Dinas Komunikasi Informatika dan Statistik</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Aplikasi Satu Data Yang Dibuat Bidang Pengelolaan Berbasis Elektronik Di Dinas Komunikasi Informatika dan Statistik Akan Terus Berupaya Memberikan Yang Terbaik Dalam Mendukung Terwujudnya Visi dan Misi Kabupaten Bengkalis dan Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{{asset('images/kabid.jpg')}}" class="testimonial-img" alt="">
+              <h3>Azmar, S.Kom, MIP</h3>
+              <h4>Kepala Bidang Statistik dan Persandian</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Aplikasi Satu Data Yang Kami Kelola Akan Memberikan Data-Data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Testimonials Section -->
 
   <!-- ======= Facts Section ======= -->
   <section id="facts" class="facts">
@@ -300,91 +404,6 @@
     </div>
   </section>
   <!-- End Portfolio Section -->
-
-  <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>PEJABAT PIMPINAN DAERAH</h2>
-      </div>
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="{{asset('images/bupati.jpg')}}" class="testimonial-img" alt="">
-              <h3>Kasmarni, S.Sos, MMP</h3>
-              <h4>Bupati Bengkalis</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Saya Yakin Dengan Adanya Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka, Untuk Mewujudkan Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="{{asset('images/wabup.jpg')}}" class="testimonial-img" alt="">
-              <h3>Dr. H. Bagus Santoso, MP</h3>
-              <h4>Wakil Bupati Bengkalis</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Mudah-mudahan Aplikasi Satu Data Kabupaten Bengkalis Ini Bisa Memberikan Data-Data Atau Informasi Dari Perangkat Daerah Dilingkungan Pemerintah Kabupaten Bengkalis Yang Akurat, Akuntabel dan Transparan dalam mendukung terwujudnya Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="{{asset('images/pltsekda.png')}}" class="testimonial-img" alt="">
-              <h3>dr. Ersan Saputra, TH</h3>
-              <h4>Plt. Sekretaris Daerah</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Semoga Dengan Aplikasi Satu Data Kabupaten Bengkalis Bisa Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Bisa Memberikan Informasi Kepada Masyarakat Banyak Demi Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="{{asset('images/kadis.jpg')}}" class="testimonial-img" alt="">
-              <h3>Hendrik Dwi Yatmoko, S.Sos, MT</h3>
-              <h4>Kepala Dinas Komunikasi Informatika dan Statistik</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Aplikasi Satu Data Yang Dibuat Bidang Pengelolaan Berbasis Elektronik Di Dinas Komunikasi Informatika dan Statistik Akan Terus Berupaya Memberikan Yang Terbaik Dalam Mendukung Terwujudnya Visi dan Misi Kabupaten Bengkalis dan Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="{{asset('images/kabid.jpg')}}" class="testimonial-img" alt="">
-              <h3>Azmar, S.Kom, MIP</h3>
-              <h4>Kepala Bidang Statistik dan Persandian</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Aplikasi Satu Data Yang Kami Kelola Akan Memberikan Data-Data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Akurat dan Akuntabel, Serta Memberikan Kemudahan dan Kebutuhan Akses Data Untuk Masyarakat dan Instansi Pemerintahan Dengan Berkualitas dan Terbuka.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-          <!-- End testimonial item -->
-
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-    </div>
-  </section>
-  <!-- End Testimonials Section -->
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
