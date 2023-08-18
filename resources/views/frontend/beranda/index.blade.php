@@ -38,19 +38,19 @@
 <!-- ======= Logo Slider ======= -->
 <div class="brand-carousel owl-carousel">
         <div class="box">
-            <img src="{{asset('link/Riau.png')}}" alt="">
+          <a href="https://www.riau.go.id/portal-riau/" target="_blank"><img src="{{asset('link/Riau.png')}}" alt=""></a>
         </div>
         <div class="box">
-            <img src="{{asset('link/Bengkalis.png')}}" alt="">
+          <a href="https://bengkaliskab.go.id/" target="_blank"><img src="{{asset('link/Bengkalis.png')}}" alt=""></a>
         </div>
         <div class="box">
-            <img src="{{asset('link/BAPPENAS.png')}}" alt="">
+          <a href="https://bappenas.go.id/" target="_blank"><img src="{{asset('link/BAPPENAS.png')}}" alt=""></a>
         </div>
         <div class="box">
-            <img src="{{asset('link/BPS.png')}}" alt="">
+          <a href="https://bps.go.id/" target="_blank"><img src="{{asset('link/BPS.png')}}" alt=""></a>
         </div>
         <div class="box">
-            <img src="{{asset('link/SIBOS.png')}}" alt="">
+          <a href="https://sibos.bengkaliskab.go.id/" target="_blank"><img src="{{asset('link/SIBOS.png')}}" alt=""></a>
         </div>
 </div>
 <!-- ======= Logo Slider ======= -->
