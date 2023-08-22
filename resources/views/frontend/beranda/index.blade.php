@@ -34,53 +34,57 @@
 </section>
 <!-- End Hero -->
 
-<main id="main">
-<!-- ======= Logo Slider ======= -->
-<div class="brand-carousel owl-carousel">
-        <div class="box">
-          <a href="https://www.riau.go.id/portal-riau/" target="_blank"><img src="{{asset('link/Riau.png')}}" alt=""></a>
-        </div>
-        <div class="box">
-          <a href="https://bengkaliskab.go.id/" target="_blank"><img src="{{asset('link/Bengkalis.png')}}" alt=""></a>
-        </div>
-        <div class="box">
-          <a href="https://bappenas.go.id/" target="_blank"><img src="{{asset('link/BAPPENAS.png')}}" alt=""></a>
-        </div>
-        <div class="box">
-          <a href="https://bps.go.id/" target="_blank"><img src="{{asset('link/BPS.png')}}" alt=""></a>
-        </div>
-        <div class="box">
-          <a href="https://sibos.bengkaliskab.go.id/" target="_blank"><img src="{{asset('link/SIBOS.png')}}" alt=""></a>
-        </div>
-</div>
-<!-- ======= Logo Slider ======= -->
+<main id="main"><br>
+<!-- ======= Ikon Kotak ======= -->
+<section id="icon-boxes" class="icon-boxes">
+  <div class="container">
 
-<!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>SATU DATA KABUPATEN BENGKALIS</h2>
-        <p>Merupakan aplikasi resmi yang menyediakan data dari Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya di Kabupaten Bengkalis yang akurat dan akuntabel, serta memberikan kemudahan dan kebutuhan akses data untuk masyarakat dan instansi pemerintahan dengan berkualitas dan terbuka.</p>
+    <div class="row justify-content-around">
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/BAPPENAS.png')}}" width="100" height="100"></div></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bappenas.go.id/" target="_blank">BAPPENAS</a></h4></center>
+          <center><p class="description">Kementerian RI</p></center>
+        </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="{{asset('images/tentang.png')}}" height="200" width="400" class="img-fluid" alt="">
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/BPS.png')}}" width="100" height="100"></div></center>
+          <center><h5 class="title" style="font-size: 10pt;"><a href="https://bps.go.id/" target="_blank">BPS</a></h5></center>
+          <center><p class="description">Badan Pusat Statistik RI</p></center>
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content">
-          <h3>Tentang Satu Data</h3>
-          <p class="text-justify">
-          Merupakan salah satu aplikasi yang dibangun oleh Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis. Dibuat dengan tujuan sebagai media untuk penyajian data informasi spesifik dari Data Sektoral dan Data Spasial. 
-          Aplikasi ini dikelola oleh bidang Statistik yang ada di Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis yang bekerjasama dengan Organisasi Perangkat Daerah (OPD) lingkup Pemerintah Kabupaten Bengkalis. 
-          Diharapkan dengan adanya aplikasi Satu Data ini, bisa membantu masyarakat/akademisi/pengusaha/instansi pemerintahan dalam mendapatkan data yang valid serta up to date.
-          </p>
+      </div>
+
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/Riau.png')}}" width="80" height="100"></div></center>
+          <center><h5 class="title" style="font-size: 10pt;"><a href="https://rumahdata.riau.go.id/" target="_blank">RUMAH DATA RIAU</a></h5></center>
+          <center><p class="description">Provinsi Riau</p></center>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/Bengkalis.png')}}" width="80" height="100"></div></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bengkaliskab.go.id/" target="_blank">PORTAL BENGKALIS</a></h4></center>
+          <center><p class="description">Kabupaten Bengkalis</p></center>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/SIBOS.png')}}" width="100" height="100"></div></center>
+          <h4 class="title" style="font-size: 10pt;"><center><a href="https://sibos.bengkaliskab.go.id/" target="_blank">SIBOS</a></center></h4>
+          <center><p class="description">Kabupeten Bengkalis</p></center>
         </div>
       </div>
 
     </div>
-  </section>
-  <!-- End About Section -->
+
+  </div>
+</section>
+<!-- Ikon Kotak -->
 
   <!-- ======= Testimonials Section ======= -->
   <section id="testimonials" class="testimonials section-bg">
@@ -166,6 +170,33 @@
     </div>
   </section>
   <!-- End Testimonials Section -->
+
+<!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>SATU DATA KABUPATEN BENGKALIS</h2>
+        <p>Merupakan aplikasi resmi yang menyediakan data dari Perangkat Daerah di Lingkungan Pemerintah Kabupaten Bengkalis dan Instansi lainnya di Kabupaten Bengkalis yang akurat dan akuntabel, serta memberikan kemudahan dan kebutuhan akses data untuk masyarakat dan instansi pemerintahan dengan berkualitas dan terbuka.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="{{asset('images/tentang.png')}}" height="200" width="400" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content">
+          <h3>Tentang Satu Data</h3>
+          <p class="text-justify">
+          Merupakan salah satu aplikasi yang dibangun oleh Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis. Dibuat dengan tujuan sebagai media untuk penyajian data informasi spesifik dari Data Sektoral dan Data Spasial. 
+          Aplikasi ini dikelola oleh bidang Statistik yang ada di Dinas Komunikasi, Informatika dan Statistik Kabupaten Bengkalis yang bekerjasama dengan Organisasi Perangkat Daerah (OPD) lingkup Pemerintah Kabupaten Bengkalis. 
+          Diharapkan dengan adanya aplikasi Satu Data ini, bisa membantu masyarakat/akademisi/pengusaha/instansi pemerintahan dalam mendapatkan data yang valid serta up to date.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End About Section -->
 
   <!-- ======= Facts Section ======= -->
   <section id="facts" class="facts">
