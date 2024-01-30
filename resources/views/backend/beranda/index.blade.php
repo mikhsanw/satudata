@@ -8,7 +8,7 @@ $counttotal = App\Model\Elemen::count();
 ?>
 <div class="subheader">
     <h1 class="subheader-title">
-        <i class='subheader-icon fal fa-home'></i> Selamat Datang di Satu Data (BERMASA) Kabupaten Bengkalis
+        <i class='subheader-icon fal fa-home'></i> Selamat Datang di Satu Data Kabupaten Bengkalis
     </h1>
 </div>
 <div class="row">
