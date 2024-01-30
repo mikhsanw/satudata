@@ -8,18 +8,18 @@
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
     <div class="sys-logo">
       <img id="img-desktop" src="{{asset('images/satu-data.png')}}" alt="image">
-      <img id="img-mobile" src="{{asset('images/Kabupaten Bengkalis Bermasa.png')}}" alt="image">
+      <!--<img id="img-mobile" src="{{asset('images/Kabupaten Bengkalis Bermasa.png')}}" height="100" width="200" alt="image">-->
     </div>
     <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
     <form class="search-big-form no-border search-shadow" method="get" action="{{url('cari#cari')}}">
 			<div class="row m-0">
-				<div class="col-lg-4 col-md-7 col-sm-12 p-0">
+				<div class="col-lg-3 col-md-4 col-sm-12 p-0">
 				  <div class="form-group">
 				  <i class="ti-search"></i>
 				    <input name="keyword" type="text" class="form-control b-r" placeholder="Pencarian Data ...">
 				  </div>
 				</div>
-		    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+		    <div class="col-lg-3 col-md-3 col-sm-10 p-0">
 			    <button type="submit" class="btn btn-primary full-width"><i class="bx bx-search"></i> Cari</button>
 			  </div>
 			</div>
@@ -40,31 +40,31 @@
   <div class="container">
 
     <div class="row justify-content-around">
-      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
-          <center><div class="icon"><img src="{{asset('link/BAPPENAS.png')}}" width="100" height="100"></div></center>
-          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bappenas.go.id/" target="_blank">BAPPENAS sukses</a></h4></center>
+          <center><div class="icon"><img src="{{asset('link/BAPPENAS.png')}}" width="120" height="100"></div></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bappenas.go.id/" target="_blank">BAPPENAS</a></h4></center>
           <center><p class="description">Kementerian RI</p></center>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/BPS.png')}}" width="100" height="100"></div></center>
-          <center><h5 class="title" style="font-size: 10pt;"><a href="https://bps.go.id/" target="_blank">BPS</a></h5></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bps.go.id/" target="_blank">BPS</a></h4></center>
           <center><p class="description">Badan Pusat Statistik RI</p></center>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/Riau.png')}}" width="80" height="100"></div></center>
-          <center><h5 class="title" style="font-size: 10pt;"><a href="https://rumahdata.riau.go.id/" target="_blank">RUMAH DATA RIAU</a></h5></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://rumahdata.riau.go.id/" target="_blank">RUMAH DATA RIAU</a></h4></center>
           <center><p class="description">Provinsi Riau</p></center>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/Bengkalis.png')}}" width="80" height="100"></div></center>
           <center><h4 class="title" style="font-size: 10pt;"><a href="https://bengkaliskab.go.id/" target="_blank">PORTAL BENGKALIS</a></h4></center>
@@ -72,10 +72,26 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/SIBOS.png')}}" width="100" height="100"></div></center>
           <h4 class="title" style="font-size: 10pt;"><center><a href="https://sibos.bengkaliskab.go.id/" target="_blank">SIBOS</a></center></h4>
+          <center><p class="description">Kabupeten Bengkalis</p></center>
+        </div>
+      </div><hr/>
+      
+      <div class="col-md-8 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/AIDS.png')}}" width="80" height="100"></div></center>
+          <h4 class="title" style="font-size: 10pt;"><center><a href="#" target="_blank">HIV & AIDS</a></center></h4>
+          <center><p class="description">Kabupeten Bengkalis</p></center>
+        </div>
+      </div>
+      
+      <div class="col-md-8 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/STUNTING.png')}}" width="100" height="100"></div></center>
+          <h4 class="title" style="font-size: 10pt;"><center><a href="#" target="_blank">STUNTING</a></center></h4>
           <center><p class="description">Kabupeten Bengkalis</p></center>
         </div>
       </div>
@@ -127,7 +143,7 @@
             <div class="testimonial-item">
               <img src="{{asset('images/pltsekda.png')}}" class="testimonial-img" alt="">
               <h3>dr. Ersan Saputra, TH</h3>
-              <h4>Plt. Sekretaris Daerah</h4>
+              <h4>Sekretaris Daerah</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Semoga Dengan Aplikasi Satu Data Kabupaten Bengkalis Bisa Menyediakan Data-data Dari Perangkat Daerah Di Lingkungan Pemerintah Kabupaten Bengkalis Yang Bisa Memberikan Informasi Kepada Masyarakat Banyak Demi Mewujudkan Kabupaten Bengkalis Bermarwah, Maju dan Sejahtera (BERMASA).
@@ -138,8 +154,8 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <img src="{{asset('images/kadis.jpg')}}" class="testimonial-img" alt="">
-              <h3>Hendrik Dwi Yatmoko, S.Sos, MT</h3>
+              <img src="{{asset('images/kadisbaru.jpg')}}" class="testimonial-img" alt="">
+              <h3>Dr. H. Suwarto, S.Pd, M.Pd</h3>
               <h4>Kepala Dinas Komunikasi Informatika dan Statistik</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
