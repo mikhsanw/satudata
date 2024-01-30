@@ -23,8 +23,8 @@
   <link href="{{asset('MyResume/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
   <link href="{{asset('MyResume/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('MyResume/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.css">
   <!-- Template Main CSS File -->
   <link href="{{asset('MyResume/assets/css/style.css')}}" rel="stylesheet">
