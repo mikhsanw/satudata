@@ -43,7 +43,7 @@
       <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/BAPPENAS.png')}}" width="100" height="100"></div></center>
-          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bappenas.go.id/" target="_blank">BAPPENAS</a></h4></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://bappenas.go.id/" target="_blank">BAPPENAS sukses</a></h4></center>
           <center><p class="description">Kementerian RI</p></center>
         </div>
       </div>
