@@ -41,9 +41,10 @@
 			</thead>
 			<tbody>
 				@php $i=1; @endphp
-				@foreach($datas as $data)
+				@foreach($datas as $key => $data)
+				@php $i=($datas->currentpage()-1) * $datas->perpage() + $key + 1; @endphp
 					<tr>
-						<td style="font-weight: bold; text-align: center;">{{$i}}</td>
+						<td style="font-weight: bold; text-align: left;">{{$i}}</td>
 						<td style="font-weight: bold;">{{$data->nama??''}}</td>
 						<td>{{$data->satuan??''}}</td>
 						<td>{{($data->opd->nama??'')}}</td>
@@ -66,6 +67,7 @@
 				@endforeach
 			</tbody>
 		</table>
+		{{ $datas->links() }}
 	</div>
 </div>
 

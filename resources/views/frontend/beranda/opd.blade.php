@@ -3,7 +3,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    <img src="{{asset('images/satu-data.png')}}" height="200" width="400" alt="image">
+    <img src="{{asset('images/satu-data.png')}}" alt="image" style="height: 90px;">
     <p>"BERMASA" <span class="typed" data-typed-items="Bermarwah, Maju, Sejahtera"></span></p></p>
 
     <div class="social-links">

@@ -76,7 +76,7 @@
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/SIBOS.png')}}" width="100" height="100"></div></center>
           <h4 class="title" style="font-size: 10pt;"><center><a href="https://sibos.bengkaliskab.go.id/" target="_blank">SIBOS</a></center></h4>
-          <center><p class="description">Kabupeten Bengkalis</p></center>
+          <center><p class="description">Kabupaten Bengkalis</p></center>
         </div>
       </div><hr/>
       
@@ -84,15 +84,18 @@
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/AIDS.png')}}" width="80" height="100"></div></center>
           <h4 class="title" style="font-size: 10pt;"><center><a href="#" target="_blank">HIV & AIDS</a></center></h4>
-          <center><p class="description">Kabupeten Bengkalis</p></center>
+          <center><p class="description">Kabupaten Bengkalis</p></center>
         </div>
       </div>
       
       <div class="col-md-8 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/STUNTING.png')}}" width="100" height="100"></div></center>
-          <h4 class="title" style="font-size: 10pt;"><center><a href="#" target="_blank">STUNTING</a></center></h4>
-          <center><p class="description">Kabupeten Bengkalis</p></center>
+          {{-- <a download="MyPdf" href="{{ Storage::url('stunting.pdf') }}" title="MyPdf">Download</a> --}}
+          @foreach ($stunting as $item)
+          <h4 class="title" style="font-size: 10pt;"><center><a href="{{$item->file ? url($item->file->getFileName($item->id,'buku')->url_stream) : ''}}" target="_blank">STUNTING</a></center></h4>
+          @endforeach
+          <center><p class="description">Kabupaten Bengkalis</p></center>
         </div>
       </div>
 
@@ -404,6 +407,30 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
       @foreach($buku as $data)
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          
+          <div class="portfolio-wrap">
+            <img src="{{$data->file ? $data->file->getFileName($data->id,'gambar')->url_stream : ''}}" width="100%" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{$data->nama}}</h4>
+              <div class="portfolio-links">
+              <a href="{{$data->file ? url($data->file->getFileName($data->id,'buku')->url_stream) : ''}}" target="blank_">
+                <i class="bx bx-download"></i>
+              </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      @endforeach
+      </div>
+
+      <div class="section-title">
+        <h2>PUBLIKASI INSOSEK</h2>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      @foreach($insosek as $data)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           
           <div class="portfolio-wrap">

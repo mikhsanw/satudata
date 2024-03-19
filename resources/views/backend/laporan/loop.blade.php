@@ -1,6 +1,6 @@
-@php $tes=$tes.('.'.$key+1); @endphp
+@php $tes=$tes.('.'.$key + 1); @endphp
 <tr>
-    <td style="text-align: center;">{{$i.$tes}} </td>
+    <td style="text-align: left;">{{$i.$tes}} </td>
     <td>{{$item->nama}}</td>
     <td>{{$item->satuan??''}}</td>
     <td>{{($data->opd->nama??'')}}</td>

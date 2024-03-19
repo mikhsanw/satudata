@@ -28,6 +28,8 @@ class frontendController extends Controller
             'opd' => Opd::orderby('tingkatan','asc')->get(),
             'wilayah' => Wilayah::where('tingkatan','1')->get(),
             'buku' => Dokumen::whereStatus(config('master.status_dokumen.buku'))->latest()->get(),
+            'insosek' => Dokumen::whereStatus(config('master.status_dokumen.insosek'))->latest()->get(),
+            'stunting' => Dokumen::whereStatus(config('master.status_dokumen.stunting'))->latest()->get(),
             'monografi' => Dokumen::whereStatus(config('master.status_dokumen.monografi'))->latest()->get(),
         );
         return view('frontend.beranda.index',$data);
@@ -100,8 +102,9 @@ class frontendController extends Controller
     }
 
     public function opdAll(){
-        $opd = Opd::orderby('tingkatan','asc')->get();
-        return view('frontend.beranda.opdall', compact('opd'));
+        $opd_vertikal = Opd::whereTingkatan('6')->get();
+        $opd = Opd::whereNotIn('tingkatan', [6])->get();
+        return view('frontend.beranda.opdall', compact('opd','opd_vertikal'));
     }
 
     public function opdDetail($id){
@@ -123,9 +126,15 @@ class frontendController extends Controller
     public function cari(Request $request){
         $cari = $request->keyword;
         $data = [
-            'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->count(),
-            'elemen'=>Elemen::whereNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
-            'subelemen'=>Elemen::whereNotNull('parent_id')->where('nama' ,'LIKE','%'.$cari.'%')->get(),
+            'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                    })->count(),
+            'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                    })->whereNull('parent_id')->get(),
+            'subelemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                    })->whereNotNull('parent_id')->get(),
             'keyword'=>$cari
         ];
         return view('frontend.beranda.cari.index', $data);

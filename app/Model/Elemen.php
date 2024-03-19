@@ -68,4 +68,26 @@ class Elemen extends Model
         }
         return $namanew;
     }
+
+    public function getDataSubElemen($id,$no,$key)
+    {
+        $elemen = Elemen::find($id);
+        $no=$no.('.'.$key+1);
+        foreach(config('master.tahunlaporan') as $th){
+            $tahun[$th] = Data::whereElemenId($elemen->id)->whereTahun($th)->first()->jumlah??"";
+        }
+        $data[] = [
+            'nomor'=>'1'.$no,
+            'elemen'=>$elemen->nama,
+            'satuan'=>$elemen->satuan,
+            'opd'=>$elemen->opd->nama,
+            'status'=>(count($elemen->data)>0)?'Ada':'',
+            'data'=>$tahun,
+            'keterangan'=>$elemen->keterangan??"-",
+        ];
+        foreach($elemen->children as $key => $item){
+            $data[] = $elemen->getDataSubElemen($item->id,$no,$key);
+        }
+        return $data;
+    }
 }

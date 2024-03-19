@@ -19,7 +19,8 @@ class userController extends Controller
     public function masuk(Request $request)
     {
         $validator=Validator::make($request->all(), [
-            'username'=>'required', 'password'=>'required','g-recaptcha-response' => 'required|recaptcha',
+            'username'=>'required', 'password'=>'required',
+            // 'g-recaptcha-response' => 'required|recaptcha',
         ]);
         if ($validator->fails()) {
             $response=['status'=>FALSE, 'pesan'=>$validator->messages()];

@@ -18,5 +18,11 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::post('reset_pegawai_penempatan', 'Backend/jabatanpenempatanController@reset_pegawai_penempatan');
+Route::post('login', 'Api\ElemenController@login')->name('login');
+Route::group(['middleware'=>['auth:sanctum']], function () {
+    Route::post('cari', 'Api\ElemenController@cari')->name('cari');
+    Route::post('caridetail', 'Api\ElemenController@caridetail')->name('caridetail');
+});
+Route::get('data.json', 'Api\ElemenController@dcat')->name('dcat');
+
 
