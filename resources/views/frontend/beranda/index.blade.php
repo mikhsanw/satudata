@@ -50,6 +50,22 @@
 
       <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/satudataindonesia.png')}}" width="100" height="100"></div></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://data.go.id/home" target="_blank">SDI</a></h4></center>
+          <center><p class="description">Satu Data Indonesia</p></center>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <center><div class="icon"><img src="{{asset('link/databoks.png')}}" width="100" height="100"></div></center>
+          <center><h4 class="title" style="font-size: 10pt;"><a href="https://databoks.katadata.co.id/" target="_blank">DATABOKS</a></h4></center>
+          <center><p class="description">Pusat Data Ekonomi dan Bisnis</p></center>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/BPS.png')}}" width="100" height="100"></div></center>
           <center><h4 class="title" style="font-size: 10pt;"><a href="https://bps.go.id/" target="_blank">BPS</a></h4></center>
           <center><p class="description">Badan Pusat Statistik RI</p></center>
@@ -62,7 +78,7 @@
           <center><h4 class="title" style="font-size: 10pt;"><a href="https://rumahdata.riau.go.id/" target="_blank">RUMAH DATA RIAU</a></h4></center>
           <center><p class="description">Provinsi Riau</p></center>
         </div>
-      </div>
+      </div><hr/>
 
       <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
@@ -78,17 +94,19 @@
           <h4 class="title" style="font-size: 10pt;"><center><a href="https://sibos.bengkaliskab.go.id/" target="_blank">SIBOS</a></center></h4>
           <center><p class="description">Kabupaten Bengkalis</p></center>
         </div>
-      </div><hr/>
+      </div>
       
-      <div class="col-md-8 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/AIDS.png')}}" width="80" height="100"></div></center>
-          <h4 class="title" style="font-size: 10pt;"><center><a href="#" target="_blank">HIV & AIDS</a></center></h4>
+          @foreach ($hivaids as $item)
+          <h4 class="title" style="font-size: 10pt;"><center><a href="{{$item->file ? url($item->file->getFileName($item->id,'buku')->url_stream) : ''}}" target="_blank">HIV & AIDS</a></center></h4>
+          @endforeach
           <center><p class="description">Kabupaten Bengkalis</p></center>
         </div>
       </div>
       
-      <div class="col-md-8 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box">
           <center><div class="icon"><img src="{{asset('link/STUNTING.png')}}" width="100" height="100"></div></center>
           {{-- <a download="MyPdf" href="{{ Storage::url('stunting.pdf') }}" title="MyPdf">Download</a> --}}
@@ -402,7 +420,31 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>PUBLIKASI</h2>
+        <h2>BUKU INTERAKTIF</h2>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      @foreach($interaktif as $data)
+        <div class="col-lg-8 col-md-6 portfolio-item filter-app">
+          
+          <div class="portfolio-wrap">
+            <img src="{{$data->file ? $data->file->getFileName($data->id,'gambar')->url_stream : ''}}" width="100%" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{$data->nama}}</h4>
+              <div class="portfolio-links">
+              <a href="{{$data->file ? url($data->file->getFileName($data->id,'buku')->url_stream) : ''}}" target="blank_">
+                <i class="bx bx-download"></i>
+              </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      @endforeach
+      </div>
+
+      <div class="section-title">
+        <h2>BUKU KOMPILASI DATA</h2>
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -426,7 +468,7 @@
       </div>
 
       <div class="section-title">
-        <h2>PUBLIKASI INSOSEK</h2>
+        <h2>BUKU INSOSEK</h2>
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
