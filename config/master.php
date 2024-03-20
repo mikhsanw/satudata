@@ -73,6 +73,10 @@ return [
     'status_dokumen'=>[
         'buku'               => '0',
         'monografi'          => '1',
+        'insosek'            => '2',
+        'stunting'           => '3',
+        'hivaids'            => '4',
+        'interaktif'         => '5',
     ],
     'status_kelola'=>[
         '0'               => 'Sub Elemen',
