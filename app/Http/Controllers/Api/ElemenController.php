@@ -62,18 +62,30 @@ class ElemenController extends Controller
 
     public function cari(Request $request){
         $cari = $request->keyword;
-        $data = [
-            'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
-                $query->where('nama', 'like', '%' . $cari . '%');
-        })->count(),
-            'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+        if($cari){
+            $data = [
+                'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
                     $query->where('nama', 'like', '%' . $cari . '%');
-            })->whereNull('parent_id')->get(),
-            'subelemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+            })->count(),
+                'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                })->whereNull('parent_id')->get(),
+                'subelemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                })->whereNotNull('parent_id')->get(),
+                'keyword'=>$cari
+            ];
+        }else{
+            $data = [
+                'count'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
                     $query->where('nama', 'like', '%' . $cari . '%');
-            })->whereNotNull('parent_id')->get(),
-            'keyword'=>$cari
-        ];
+            })->count(),
+                'elemen'=>Elemen::where('nama' ,'LIKE','%'.$cari.'%')->orWhereHas('opd', function ($query) use ($cari) {
+                        $query->where('nama', 'like', '%' . $cari . '%');
+                })->whereNull('parent_id')->get(),
+                'keyword'=>$cari
+            ];
+        }
         return response()->json($data);
     }
 
