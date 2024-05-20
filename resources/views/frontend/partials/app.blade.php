@@ -64,7 +64,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <script>
+    <!-- <script>
         $('.brand-carousel').owlCarousel({
             loop:true,
             margin:10,
@@ -81,7 +81,7 @@
                 }
             }
         })
-    </script>
+    </script> -->
 <!-- Template Main JS File -->
 <script src="{{asset('MyResume/assets/js/main.js')}}"></script>
 <!-- <script src="{{asset('MyResume/assets/js/pagination.js')}}"></script> -->
