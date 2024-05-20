@@ -13,7 +13,7 @@
     </div>
     <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
     <!-- Histats.com  START  (aync)-->
-    <script type="text/javascript">var _Hasync= _Hasync|| [];
+    <!-- <script type="text/javascript">var _Hasync= _Hasync|| [];
       _Hasync.push(['Histats.start', '1,4741505,4,30,130,80,00011111']);
       _Hasync.push(['Histats.fasi', '1']);
       _Hasync.push(['Histats.track_hits', '']);
@@ -22,7 +22,7 @@
     hs.src = ('//s10.histats.com/js15_as.js');
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
     })();</script>
-    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4741505&101" alt="web stats analysis" border="0"></a></noscript>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4741505&101" alt="web stats analysis" border="0"></a></noscript> -->
     <!-- Histats.com  END  -->
     <div class="copyright">
       &copy; Copyright <strong><span>2023</span></strong>. All Rights Reserved
