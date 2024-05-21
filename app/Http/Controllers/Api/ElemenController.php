@@ -145,7 +145,7 @@ class ElemenController extends Controller
                     "distribution" => [
                         [
                             "@type" => "dcat:Distribution",
-                            "downloadURL" => "http://satudata.test/export/".$items->id,
+                            "downloadURL" => url("export/".$items->id),
                             "mediaType" => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                             "format" => "xlsx",
                             "title" => $items->nama
@@ -153,7 +153,7 @@ class ElemenController extends Controller
                     ],
                     "identifier" => $items->id,
                     "issued" => Carbon::parse($items->created_at)->toDateString(),
-                    "landingPage" => "https://satudata.bengkaliskab.go.id/caridetail/".$items->id."#cari",
+                    "landingPage" => url("caridetail/".$items->id."#cari"),
                     "modified" => "-",
                     "accrualPeriodicity" => "Tahunan",
                     "publisher" => [
@@ -170,7 +170,7 @@ class ElemenController extends Controller
         }
         $datas =  $data = [
             "@context" => "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
-            "@id" => "http://satudata.bengkaliskab.go.id/",
+            "@id" => url("/"),
             "@type" => "dcat:Catalog",
             "conformsTo" => "https://project-open-data.cio.gov/v1.1/schema",
             "describedBy" => "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
