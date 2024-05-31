@@ -154,7 +154,21 @@ class frontendController extends Controller
 
     public function export($id) 
     {
-        return Excel::download(new PencarianExport($id), $id.'.xlsx');
+        $ext = explode('.', $id);
+        if(isset($ext[1])){
+            $id = $ext[0];
+            $type = $ext[1];
+        }else{
+            $id = $id;
+            $type = 'xlsx';
+        }
+        if($type == 'xlsx'){
+            return Excel::download(new PencarianExport($id), $id.'.xlsx');
+        }else if($type == 'csv'){
+            return Excel::download(new PencarianExport($id), $id.'.csv',\Maatwebsite\Excel\Excel::CSV, [
+                'Content-Type' => 'text/csv',
+          ]);
+        }
     }
 
     public function chart($id) 

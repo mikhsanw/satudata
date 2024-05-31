@@ -145,9 +145,9 @@ class ElemenController extends Controller
                     "distribution" => [
                         [
                             "@type" => "dcat:Distribution",
-                            "downloadURL" => url("export/".$items->id),
-                            "mediaType" => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                            "format" => "xlsx",
+                            "downloadURL" => url("export/".$items->id.".csv"),
+                            "mediaType" => "text/csv",
+                            "format" => "csv",
                             "title" => $items->nama
                         ]
                     ],
@@ -165,6 +165,7 @@ class ElemenController extends Controller
                     "keyword" => [
                         "Bengkalis",
                         "Pemerintah Kabupaten Bengkalis",
+                        "Satu Data",
                     ]
                 ];
         }
