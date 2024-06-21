@@ -13,7 +13,7 @@
                 @else
                     {{Help::desimal($elemen->filterjumlah($item->id??'',$th)->jumlah)}}
                 @endif
-            @elseif((count($item->children) == 0) && $data->satuan != NULL)
+            @elseif((count($item->children) == 0) && $item->satuan != NULL)
                 {!!'<input type="text" name="data" data-id="'.$item->id.'" data-th="'.$th.'" style="width: 50px;"><i id="loading-spinner'.$item->id.$th.'" class="fa fa-spinner fa-spin" style="display: none;"></i>'!!}
             @endif
         </td>
