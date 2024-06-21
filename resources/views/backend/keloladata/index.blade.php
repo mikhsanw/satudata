@@ -56,7 +56,7 @@
 								@else
 									{{Help::desimal($elemen->filterjumlah($data->id??'',$th)->jumlah)}}
 								@endif
-							@elseif(count($data->children) == 0)
+							@elseif((count($data->children) == 0) && $data->satuan != NULL)
 								{!!'<input type="text" name="data" data-id="'.$data->id.'" data-th="'.$th.'" style="width: 50px;"><i id="loading-spinner'.$data->id.$th.'" class="fa fa-spinner fa-spin" style="display: none;"></i>'!!}
 							@endif
 						</td>
