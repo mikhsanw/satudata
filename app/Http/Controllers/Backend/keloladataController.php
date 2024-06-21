@@ -20,7 +20,7 @@ class keloladataController extends Controller
         }else{
             $datas = Elemen::whereNull('parent_id')->paginate(5);
         }
-        $tahuns = array(date("Y")-4,date("Y")-3,date("Y")-2,date("Y")-1,date("Y"));
+        $tahuns = array(date("Y")-2,date("Y")-1);
         $elemen = new Elemen;
         return view('backend.keloladata.index',['opds'=>$opds,'datas'=>$datas,'tahuns'=>$tahuns,'elemen'=>$elemen]);
     }
