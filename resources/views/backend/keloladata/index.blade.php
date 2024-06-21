@@ -6,10 +6,10 @@
 <div class="container">
 	<form method="get" action="{{url('keloladata/opd')}}">
 		<div class="row">
-			<div class="col-8">
+			<div class="col-12 pt-5">
 				<!-- &nbsp; &nbsp; &nbsp; Perangkat Daerah : -->
-				<select onchange="this.form.submit()" style="width: 97% ; height:40px" class="select2" name="opd" id="select2">
-					<option value="0" selected>- pilih opd -</option>
+				<select onchange="this.form.submit()" class="select2" name="opd" id="select2">
+					<option value="0" selected>Pilih OPD</option>
 					@foreach($opds as $data)
 					<option value="{{ $data->id }}">{{$data->nama}}</option>
 					@endforeach
