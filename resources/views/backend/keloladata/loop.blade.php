@@ -3,7 +3,7 @@
     <td style="text-align: left;">{{$i.$tes}} </td>
     <td>{{$item->nama}}</td>
     <td>{{$item->satuan??''}}</td>
-    <td>{{($data->opd->nama??'')}}</td>
+    <td></td>
     <td style="text-align: center;">{{(count($item->data)>0)?'Ada':''}}</td>
     @foreach($tahun as $th)
         <td style="text-align: center;">
@@ -13,7 +13,7 @@
                 @else
                     {{Help::desimal($elemen->filterjumlah($item->id??'',$th)->jumlah)}}
                 @endif
-            @elseif($item->satuan != NULL)
+            @elseif(count($item->children) == 0)
                 {!!'<input type="text" name="data" data-id="'.$item->id.'" data-th="'.$th.'" style="width: 50px;"><i id="loading-spinner'.$item->id.$th.'" class="fa fa-spinner fa-spin" style="display: none;"></i>'!!}
             @endif
         </td>
