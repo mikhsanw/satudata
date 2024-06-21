@@ -51,7 +51,11 @@
 						@foreach($tahun as $th)
 						<td>
 							@if($elemen->filterjumlah($data->id??'',$th))
-								{!!$elemen->filterjumlah($data->id??'',$th)->jumlah!!}
+								@if($th == date('Y')-1)
+									{!!'<input type="text" name="data" value="'.Help::desimal($elemen->filterjumlah($data->id??'',$th)->jumlah).'" data-id="'.$data->id.'" data-th="'.$th.'" style="width: 50px;"><i id="loading-spinner'.$data->id.$th.'" class="fa fa-spinner fa-spin" style="display: none;"></i>'!!}
+								@else
+									{{Help::desimal($elemen->filterjumlah($data->id??'',$th)->jumlah)}}
+								@endif
 							@elseif($data->satuan != NULL)
 								{!!'<input type="text" name="data" data-id="'.$data->id.'" data-th="'.$th.'" style="width: 50px;"><i id="loading-spinner'.$data->id.$th.'" class="fa fa-spinner fa-spin" style="display: none;"></i>'!!}
 							@endif
