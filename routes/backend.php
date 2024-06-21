@@ -76,6 +76,12 @@ Route::group(['prefix' => config('master.url.admin')], function () {
             Route::get('/chart/{id}', 'laporanController@chart');
         });
         Route::resource('laporan', 'laporanController');
+        // Laporan
+        Route::prefix('keloladata')->as('keloladata')->group(function () {
+            Route::get('/opd', 'keloladataController@opd');
+            Route::post('/save', 'keloladataController@save');
+        });
+        Route::resource('keloladata', 'keloladataController');
         
         // wilayah
         Route::prefix('wilayah')->as('wilayah')->group(function () {
